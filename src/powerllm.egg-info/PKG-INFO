@@ -1,0 +1,251 @@
+Metadata-Version: 2.4
+Name: powerllm
+Version: 0.1.0
+Summary: Local-first RAG application for legal document analysis.
+Author-email: Riming Chen <mironchen@icloud.com>
+Requires-Python: <3.14,>=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: cn2an
+Requires-Dist: docling>=2.0.0
+Requires-Dist: docling-core
+Requires-Dist: fastapi
+Requires-Dist: google-genai
+Requires-Dist: httpx
+Requires-Dist: imagehash
+Requires-Dist: langchain>=1.2.0
+Requires-Dist: langchain-chroma
+Requires-Dist: langchain-community>=0.3.1
+Requires-Dist: langchain-core>=1.2.0
+Requires-Dist: langchain-google-genai
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-text-splitters
+Requires-Dist: langgraph
+Requires-Dist: markitdown
+Requires-Dist: openai
+Requires-Dist: opencv-python-headless
+Requires-Dist: optuna
+Requires-Dist: optuna-dashboard
+Requires-Dist: paddleocr
+Requires-Dist: pathlib>=1.0.1
+Requires-Dist: pillow
+Requires-Dist: protobuf<4,>=3.19
+Requires-Dist: pydantic>=2.0
+Requires-Dist: python-multipart
+Requires-Dist: python-dotenv
+Requires-Dist: rank-bm25
+Requires-Dist: rich
+Requires-Dist: sentence-transformers
+Requires-Dist: sqlite-vss>=0.1.2
+Requires-Dist: typer
+Requires-Dist: typing-extensions
+Requires-Dist: unstructured
+Requires-Dist: uvicorn
+
+# PowerLLM
+
+A local-first RAG (Retrieval-Augmented Generation) application for legal document analysis.
+
+## Introduction
+
+PowerLLM is designed for analyzing legal documents using retrieval and generation techniques. It uses **LangGraph** for orchestrating the RAG pipeline and supports multiple retrieval modes including similarity search, BM25 keyword search, and hybrid fusion.
+
+The system is built around a **"case" abstraction** where each case contains documents that are processed, embedded, and queried. Documents are ingested through a processing pipeline that handles PDFs with OCR, converts various formats to markdown, and creates searchable vector indices.
+
+### Key Features
+
+- **Multiple Retrieval Modes**: Similarity (dense), BM25 (sparse), and hybrid (RRF fusion)
+- **Local-First Architecture**: Runs locally with support for local models via LM Studio/oMLX
+- **Legal Document Processing**: Specialized chunking with legal-structure-aware separators
+- **Desktop Interface**: Electron + React frontend with Assistant UI for chat interaction
+- **Benchmarking Framework**: Built-in evaluation using LegalBench-RAG dataset
+- **Configuration Tuning**: Optuna-based hyperparameter optimization for retrieval
+
+## Project Structure
+
+```
+PowerLLM/
+├── src/powerllm/
+│   ├── api/
+│   │   ├── api.py              # FastAPI server with Assistant UI streaming endpoints
+│   │   └── case_manage_api.py  # Case management API endpoints
+│   ├── case_manage/
+│   │   ├── case_registry.py    # Case management (file system + SQLite metadata)
+│   │   └── case_metadata_store.py  # SQLite metadata storage for cases
+│   ├── models/
+│   │   └── model_resolver.py   # Chat model registry (Gemini, local models)
+│   ├── pre_process/
+│   │   ├── pre_process.py      # Document ingestion (Docling, MarkItDown, Gemini)
+│   │   └── watermark_detect.py # Watermark detection in PDFs
+│   ├── retrieval/
+│   │   ├── rag_graph.py        # LangGraph RAG pipeline (retrieval → generation)
+│   │   ├── pipeline.py         # Embedding model registry and retrieval tools
+│   │   ├── query_builder.py    # LLM-based BM25 query rewriting
+│   │   ├── chunker.py          # Document chunking with legal-aware separators
+│   │   └── reranker.py         # Reranking utilities
+│   └── utils/
+│       └── configuration.py    # Configuration management
+│
+├── pyproject.toml              # Python project configuration (uv)
+├── uv.lock                     # Dependency lock file
+│
+├── electron-app/               # Desktop frontend (Electron + React + TypeScript)
+│   ├── src/                    # React source code
+│   ├── electron/               # Electron main process
+│   ├── package.json            # Node.js dependencies
+│   └── ...
+│
+├── benchmark/                  # Benchmarking and tuning framework
+│   ├── README.md               # Benchmark module documentation
+│   ├── retrieval_config_tuning_README.md  # Tuning documentation
+│   ├── benchmark.py            # Main benchmark evaluation script
+│   ├── retrieval_config_tuning.py         # Optuna-based hyperparameter tuning
+│   └── ...
+│
+├── cases_data/                 # Case storage (created at runtime)
+│   └── case_{id}/              # Per-case folders
+│       ├── raw/                # Original uploaded files
+│       ├── markdown/           # Converted markdown
+│       ├── documents/          # Document snapshots (JSON)
+│       ├── images/             # Extracted images
+│       └── chroma/             # Vector store
+
+```
+
+### Backend Core Modules
+
+| Module                               | Description                                                                                                              |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `retrieval/rag_graph.py`             | LangGraph state machine: build_bm25_query → retrieve → format_context → build_generation_prompt → generate → postprocess |
+| `api/api.py`                         | FastAPI application with case management, querying, and Assistant UI streaming                                           |
+| `case_manage/case_registry.py`       | Manages case lifecycle, file storage, and document processing                                                            |
+| `retrieval/pipeline.py`              | Embedding registry, retrieval tools, and RRF fusion for hybrid search                                                    |
+| `models/model_resolver.py`           | Chat model registry supporting Gemini and OpenAI-compatible local APIs                                                   |
+| `pre_process/pre_process.py`         | Document ingestion with Docling (PDF+OCR), MarkItDown, or Gemini multimodal                                              |
+
+### Frontend
+
+The desktop application is built with:
+- **Electron** for the desktop shell
+- **React + TypeScript** for the UI
+- **Assistant UI** for the chat interface
+- **Zustand** for state management
+- **Shadcn UI** for components
+
+## How to Run
+
+### Prerequisites
+
+- Python 3.11+
+- [uv](https://docs.astral.sh/uv/) (Python package manager)
+- Node.js 18+ (for frontend)
+- Google API Key (for Gemini models, if using)
+
+### Backend Setup
+
+1. **Install dependencies (using uv):**
+   ```bash
+   uv sync
+   ```
+
+2. **Configure environment variables** (create `.env` file):
+   ```bash
+   GOOGLE_API_KEY="your-google-api-key"
+   LANGSMITH_API_KEY="optional-langsmith-key"
+   LANGSMITH_PROJECT="PowerLLM"
+   LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
+   ```
+
+3. **Run the API server:**
+   ```bash
+   uv run uvicorn powerllm.api.api:app --reload --port 8000
+   ```
+
+### Frontend Setup
+
+1. **Install dependencies:**
+   ```bash
+   cd electron-app
+   npm install
+   ```
+
+2. **Run in development mode:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+4. **Type checking:**
+   ```bash
+   npm run typecheck
+   ```
+
+## Benchmark and Configuration Tuning
+
+For detailed information on running benchmarks and tuning retrieval configuration, please refer to the specific README files:
+
+- **[benchmark/README.md](benchmark/README.md)** - Benchmark module documentation covering:
+  - Running retrieval benchmarks with different modes (similarity, BM25, hybrid)
+  - Using the Gemini Batch API for BM25 query caching
+  - Understanding benchmark metrics and results
+
+- **[benchmark/retrieval_config_tuning_README.md](benchmark/retrieval_config_tuning_README.md)** - Configuration tuning documentation covering:
+  - Optuna-based hyperparameter optimization
+  - Tuning chunk size, retrieval counts, and fusion parameters
+  - Running tuning studies and analyzing results
+
+### Quick Benchmark Commands
+
+```bash
+# Run benchmark (hybrid mode - default)
+uv run python -m benchmark.benchmark
+
+# Run with BM25 only
+uv run python -m benchmark.benchmark --retrieval-mode bm25
+
+# Run on subset
+uv run python -m benchmark.benchmark --limit-contracts 5 --limit-questions 10
+```
+
+### Quick Tuning Commands
+
+```bash
+# Quick test (10 trials, 5 contracts)
+uv run python -m benchmark.retrieval_config_tuning --n-trials 10 --limit-contracts 5
+
+# Full tuning study
+uv run python -m benchmark.retrieval_config_tuning \
+  --n-trials 100 \
+  --storage sqlite:///benchmark/config_tuning.db \
+  --study-name tuning_run
+
+# Launch Optuna dashboard
+uv run optuna-dashboard sqlite:///benchmark/config_tuning.db
+```
+
+## Configuration
+
+The application stores configuration in `config.json` (created automatically):
+- Selected embedding model ID
+- Selected chat model ID
+
+Supported embedding models:
+- `gemini-text-embedding-004` (Google)
+- `Qwen3-Embedding-0.6B-4bit-DWQ` (local, OpenAI-compatible)
+
+Supported chat models:
+- `gemini-3.1-flash-lite` (Google)
+- Local models via OpenAI-compatible API (LM Studio on port 1234)
+- Online models via OpenAI-compatible API (if configured)
+
+## Data Flow
+
+1. **Document Ingestion**: Files uploaded to `cases_data/case_{id}/raw/` → processed by `pre_process/pre_process.py` → markdown + document snapshots saved → chunked and indexed in Chroma
+
+2. **Query Flow**: User query → BM25 query rewrite (if needed) → retrieval (similarity/BM25/both) → RRF fusion (hybrid mode) → context formatting → LLM generation → citation extraction
+
+3. **State Management**: The `RAGState` TypedDict in `retrieval/rag_graph.py` carries data through the LangGraph pipeline

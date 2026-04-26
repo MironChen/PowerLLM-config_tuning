@@ -1,0 +1,2173 @@
+{
+  "format": "legalbenchrag_sample_v2",
+  "source_input": "benchmark/legalbench-datasets/privacy_qa.json",
+  "sampling": {
+    "seed": 104,
+    "target_questions": 80,
+    "target_contexts": 4,
+    "min_per_context": 10,
+    "questions_sampled": 80,
+    "contexts_sampled": 4,
+    "exclude_datasets": [
+      "benchmark/legalbench_mixed_config_q200_c20_seed42.json"
+    ],
+    "excluded_context_count": 20,
+    "excluded_matching_context_count": 3
+  },
+  "contexts": [
+    {
+      "file_path": "privacy_qa/23andMe.txt",
+      "question_count": 13
+    },
+    {
+      "file_path": "privacy_qa/Fiverr.txt",
+      "question_count": 19
+    },
+    {
+      "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+      "question_count": 20
+    },
+    {
+      "file_path": "privacy_qa/Wordscapes.txt",
+      "question_count": 28
+    }
+  ],
+  "tests": [
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; do you sell my information to third parties?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            10335,
+            11080
+          ],
+          "answer": "  We do not sell or rent your personal information to third parties for their marketing purposes without your explicit consent.\n  We may combine your personal information with information we collect automatically or obtain from other companies and use it to improve and personalize our services, content and advertising.\nIf you do not wish to receive marketing communications from us, you can opt-out through the link attached to each communication or by sending an email to optout@fiverr.com.\n  We may provide your personal details to third parties, only in order to operate the Site, provide our services to you, fulfil obligations imposed on us by applicable laws and regulations, and prevent fraud and illegal activities, as detailed below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; will my test results be shared with any third party entities?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            15349,
+            16534
+          ],
+          "answer": "To allow you to share your Personal Information for 23andMe Research purposes You have the choice to participate in 23andMe Research by providing your consent.\n\"23andMe Research\" refers to research aimed at publication in peer-reviewed journals and other research funded by the federal government (such as the National Institutes of Health - NIH) conducted by 23andMe.\n23andMe Research may be sponsored by, conducted on behalf of, or in collaboration with third parties, such as non-profit foundations, academic institutions or pharmaceutical companies.\n23andMe Research may study a specific group or population, identify potential areas or targets for therapeutics development, conduct or support the development of drugs, diagnostics or devices to diagnose, predict or treat medical or other health conditions, work with public, private and/or non-profit entities on genetic research initiatives, or otherwise create, commercialize, and apply this new knowledge to improve health care.\n23andMe Research uses Aggregate and/or Individual-level Genetic Information and Self-Reported Information as specified in the appropriate Consent Document(s), as explained in greater detail below.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            16755,
+            16935
+          ],
+          "answer": "Your Genetic Information and/or Self-Reported Information will be used for research purposes, but it will be de-identified and will not be linked to your Registration Information.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            17233,
+            17584
+          ],
+          "answer": "If you have completed the Individual Level Data Sharing Consent, or additional consent agreement, in addition to the uses above under the Main Consent Document, 23andMe may share De-identified Individual-level Genetic Information and Self-Reported Information with select third party research collaborators for 23andMe partners for Research purposes.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            18455,
+            18791
+          ],
+          "answer": "If you choose not to complete a Consent Document or any additional agreement with 23andMe, your Personal Information will not be used for 23andMe Research.\nHowever, your Genetic Information and Self-Reported Information may still be used by us and shared with our third party service providers to as outlined in this Privacy Statement.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            23008,
+            23199
+          ],
+          "answer": "We share the information described above in Section 2 with our third party service providers, as necessary for them to provide their services to us and help us perform our contract with you.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            23327,
+            25180
+          ],
+          "answer": "While 23andMe directly conducts the majority of data processing activities required to provide our Services to you, we engage some third party service providers to assist in supporting our Services, including in the following areas:\nOrder fulfillment and shipping.\nOur payment processor processes certain Registration Information, such as your billing address and credit card information, as necessary to enable you to purchase a 23andMe kit from the 23andMe.com online store.\nOur distribution centers ship your kit(s) to you, and in some cases help return your kit safely to our third party laboratory so your sample can be processed.\nOur CLIA-certified genotyping lab.\nTo use our genetic testing services, you must purchase, or receive as a gift, a 23andMe Personal Genetic Service testing kit, and ship your saliva sample to our third party laboratory.\nOnce delivered, receiving personnel at the laboratory remove and discard kit packaging, which in some cases may contain \"sender information\" (eg, name, address), before testing personnel receive the samples for processing.\nReceiving personnel do not perform testing, and testing personnel handle saliva samples that are only identified by a unique barcode.\nWhen the laboratory has completed their analysis, they securely send the resulting Genetic Information to us identified by your unique barcode.\nDuring kit registration, you are asked to review our Consent Document for Sample Storage and Additional Genetic Analyses.\nUnless you consent to Biobanking and additional analyses, your saliva sample and DNA are destroyed after the laboratory completes its work, subject to the laboratory's legal and regulatory requirements.\nShould you wish to update your sample storage preference to discard a stored sample, you can do so within your Account Settings once your sample has completed processing.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            25216,
+            25377
+          ],
+          "answer": "(Account Deletion) our contracted genotyping laboratory will retain certain information as necessary to comply with applicable regulatory and legal obligations.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            25400,
+            25499
+          ],
+          "answer": "Our Customer Care team uses a number of tools to help organize and manage the requests we receive.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            25600,
+            26129
+          ],
+          "answer": "Our cloud storage providers provide secure storage for information in 23andMe databases, ensure that our infrastructure can support continued use of our Services by 23andMe customers, and protect data in the event of a natural disaster or other disruption to the Service.\nOur IT and security providers assist with intrusion detection and prevention measures to stop any potential attacks against our networks.\nWe have these third party experts perform regular penetration tests and periodically audit 23andMes security controls.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            26154,
+            26398
+          ],
+          "answer": "When you use our Services, including our website or mobile app(s), our third party service providers may collect Web-Behavior Information about your visit, such as the links you clicked on, the duration of your visit, and the URLs you visited.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            27063,
+            27300
+          ],
+          "answer": "\"Targeted advertising\" service providers We permit third party advertising networks and providers to collect Web-Behavior Information regarding the use of our Services to help us to deliver targeted online advertisements (\"ads\") to you.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            27671,
+            29727
+          ],
+          "answer": "Aggregate information We may share Aggregate Information, which is information that has been stripped of your name and contact information and combined with information of others so that you cannot reasonably be identified as an individual, with third parties.\nThis Information is different from \"Individual-level\" information and is not Personal Information because it does not identify any particular individual or disclose any particular individuals data.\nFor example, Aggregate Information may include a statement that \"30% of our female users share a particular genetic trait,\" without providing any data or testing results specific to any individual user.\nIn contrast, Individual-level Genetic Information or Self-Reported Information consists of data about a single individual's genotypes, diseases or other traits/characteristics information and could reveal whether a specific user has a particular genetic trait, or consist of all of the Genetic Information about that user.\n23andMe will ask for your consent to share Individual-level Genetic Information or Self-Reported Information with any third party, other than our service providers as necessary for us to provide the Services to you.\nInformation we share with commonly owned entities We may share some or all of your Personal Information with other companies under common ownership or control of 23andMe, which may include our subsidiaries, our corporate parent, or any other subsidiaries owned by our corporate parent in order to provide you better service and improve user experience.\nGenerally, sharing such information is necessary for us to perform on our contract with you.\nWe may provide additional notice and ask for your prior consent if we wish to share your Personal Information with our commonly owned entities in a materially different way than discussed in this Privacy Statement.\nAs required by law Under certain circumstances your Personal Information may be subject to processing pursuant to laws, regulations, judicial or other government subpoenas, warrants, or orders.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            29959,
+            30659
+          ],
+          "answer": "23andMe will preserve and disclose any and all information to law enforcement agencies or others if required to do so by law or in the good faith belief that such preservation or disclosure is reasonably necessary to: (a) comply with legal or regulatory process (such as a judicial proceeding, court order, or government inquiry) or obligations that 23andMe may owe pursuant to ethical and other professional rules, laws, and regulations; (b) enforce the 23andMe Terms of Service and other policies; (c) respond to claims that any content violates the rights of third parties; or (d) protect the rights, property, or personal safety of 23andMe, its employees, its users, its clients, and the public.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            30710,
+            31061
+          ],
+          "answer": "NOTE: If you are participating in 23andMe Research, 23andMe will withhold disclosure of your Personal Information involved in such Research in response to judicial or other government subpoenas, warrants or orders in accordance with any applicable Certificate of Confidentiality that 23andMe has obtained from the National Institutes of Health (NIH).\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; do you use a secure payment service?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            12368,
+            12742
+          ],
+          "answer": "We do not collect credit information; but allow our payment vendors to collect information for the purpose of collecting payments from buyers on the Site or transferring payments to sellers on the Site.\nWe are not exposed to the payment information provided to our payment vendors, and this information is subject to the privacy policy applicable to the payment vendor; and\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does it read my contacts?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            3092,
+            3400
+          ],
+          "answer": "We may also offer you the ability to import your contacts or manually enter e-mail addresses so that you can locate your contacts on PeopleFun and invite your contacts to join you in the Games.\nWe will store those contacts for purposes of helping you and your contacts make connections through our Services.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5526,
+            5617
+          ],
+          "answer": "We may also access your contacts to enable you to invite friends to join you in the Games.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; are my ideas uploaded to any servers?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            798,
+            1789
+          ],
+          "answer": " We collect and hold only the information absolutely necessary for using our services, as well as limiting the internal access to your personal information for the purposes stated in Information Usage below.\nYour information will not be shared with others and is only used internally for the purposes described below:\nto provide our services or information you request, and to process and complete any transactions; to respond to your emails, submissions, questions, comments, requests, and complaints and provide customer service; to analyze usage and trends with anonymous user data, and to improve the quality of our service and user experience; to send you confirmations, updates, security alerts, and support and administrative messages and otherwise facilitate your use of, and our administration and operation of, our services; You are welcome to ask for our confirmation whenever you feel concerned about how your personal information is being processed, where and for what purpose.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does the app track my location?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6208
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\nWe may use location information to improve and personalize our Services for you.\nIf you do not want us to collect location information, you may disable that feature on your mobile device.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            7061,
+            7152
+          ],
+          "answer": "Games may use location-based tracking, which relies upon a mobile devices GPS coordinates.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does it have access to my contacts?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            3092,
+            3400
+          ],
+          "answer": "We may also offer you the ability to import your contacts or manually enter e-mail addresses so that you can locate your contacts on PeopleFun and invite your contacts to join you in the Games.\nWe will store those contacts for purposes of helping you and your contacts make connections through our Services.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5526,
+            5617
+          ],
+          "answer": "We may also access your contacts to enable you to invite friends to join you in the Games.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; what information of mine does it access",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            1643,
+            1755
+          ],
+          "answer": "When you interact with our Services, we may collect and store information from you directly as described below:\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            1791,
+            1969
+          ],
+          "answer": "If you create an Account, you may be required to provide your name, e-mail address, a password and other information that helps us confirm that it is you accessing your account.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            2044,
+            2286
+          ],
+          "answer": "If you sign into the Site or Games with Facebook Connect we will collect information that is visible via your Facebook account such as: (1) your first and last name, (2) Facebook ID, (3) Profile Picture/URL, and (4) list of Facebook friends.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            2532,
+            3400
+          ],
+          "answer": "We may also offer you the option to complete a user profile that is visible to other PeopleFun users.\nYour user profile may include a profile photo, a PeopleFun username, your gender, biographic details that you provide, details about the Games you play, and a PeopleFun user ID number that is created by PeopleFun and used to identify your profile.\nThe PeopleFun username will be public and will be shown to other users, but will only permit access to information that is considered public or that you have designated as public in your user profile settings.\nWe may also offer you the ability to import your contacts or manually enter e-mail addresses so that you can locate your contacts on PeopleFun and invite your contacts to join you in the Games.\nWe will store those contacts for purposes of helping you and your contacts make connections through our Services.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            3430,
+            3913
+          ],
+          "answer": "When you order any good or service through the Game, including any virtual currency or virtual good, our payment processing service provider will collect your name, phone number, e-mail address, mailing address, billing address, and complete credit card information that enables them to receive your payment.\nOur payment processing service provider may also retain this information to enable you to purchase additional items through our Game without having to re-enter it each time.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            4055,
+            4387
+          ],
+          "answer": "When you ask for assistance from our Customer Support team, we will collect and store the contact information you provide (generally your name and e-mail address), information about your game play or activity on the Games, and your user name or ID number.\nWe will also store the correspondence and any information contained within.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            4888,
+            5729
+          ],
+          "answer": "When you access our Services, we may collect (i) certain technical information about your mobile device or computer system, including IP Address, mobile device ID (IDFA, Google Advertising ID or other identifiers), and the version of your operating system; and (ii) usage statistics about your interactions with the Games.\nIn certain Games we will create and assign to your device an identifier that is similar to an account number.\nWe may collect the name you have associated with your device, device type, telephone number, country, and any other information you choose to provide, such as user name, character name, or e-mail address.\nWe may also access your contacts to enable you to invite friends to join you in the Games.\nThis information is typically collected through the use of third-party mobile device software development kits.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6020
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; where is the information saved",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            8411,
+            8631
+          ],
+          "answer": "Unless you consent to sample storage (Biobanking) and additional analyses, your saliva sample and DNA are destroyed after the laboratory completes its work, subject to the laboratory's legal and regulatory requirements.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            38099,
+            38277
+          ],
+          "answer": "Data, including Registration Information, Genetic Information, and Self-Reported Information are segmented across logical database systems to further prevent re-identifiability.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does this app use data on my phone not within the app?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            2044,
+            2286
+          ],
+          "answer": "If you sign into the Site or Games with Facebook Connect we will collect information that is visible via your Facebook account such as: (1) your first and last name, (2) Facebook ID, (3) Profile Picture/URL, and (4) list of Facebook friends.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            4888,
+            5211
+          ],
+          "answer": "When you access our Services, we may collect (i) certain technical information about your mobile device or computer system, including IP Address, mobile device ID (IDFA, Google Advertising ID or other identifiers), and the version of your operating system; and (ii) usage statistics about your interactions with the Games.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5321,
+            5617
+          ],
+          "answer": "We may collect the name you have associated with your device, device type, telephone number, country, and any other information you choose to provide, such as user name, character name, or e-mail address.\nWe may also access your contacts to enable you to invite friends to join you in the Games.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6020
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; what information do you take from me.",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            426,
+            1006
+          ],
+          "answer": " Personal Information: When registering for TickTick, we collect personal information such as your name.\nUsers who contact us via email, the email addresses and information you submitted voluntarily will also be collected.\n Non-Personal Information: It includes but is not limited to your devices configuration, the package ID and version of the application that you use.\n We collect and hold only the information absolutely necessary for using our services, as well as limiting the internal access to your personal information for the purposes stated in Information Usage below.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; who has access to whatever i create using this?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1006,
+            1789
+          ],
+          "answer": "Your information will not be shared with others and is only used internally for the purposes described below:\nto provide our services or information you request, and to process and complete any transactions; to respond to your emails, submissions, questions, comments, requests, and complaints and provide customer service; to analyze usage and trends with anonymous user data, and to improve the quality of our service and user experience; to send you confirmations, updates, security alerts, and support and administrative messages and otherwise facilitate your use of, and our administration and operation of, our services; You are welcome to ask for our confirmation whenever you feel concerned about how your personal information is being processed, where and for what purpose.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; is my information sold",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            14598,
+            15324
+          ],
+          "answer": "We do not actively share personal information with third party advertisers for their direct marketing purposes unless you give us your consent.\nWe may share (i) aggregated information (information about you and other users collectively, but not specifically identifiable to you); (ii) anonymous information; and (iii) certain technical information (including IP Addresses and mobile device IDs) to develop and deliver targeted advertising in the Games and on the websites of third parties.\nWe may also allow advertisers to collect these types of information within the Games and they may share it with us.\nAdvertisers may collect this information through the use of tracking technologies like browser cookies and web beacons.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            15709,
+            16104
+          ],
+          "answer": "We may disclose aggregated and anonymous information to describe the Services to prospective partners, advertisers, and other third parties, and for other lawful purposes.\nWe may use aggregate, non-personally identifiable information for our own internal promotion or marketing purposes and we may share such aggregate non-personally identifiable information with others for marketing purposes.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; is it monitoring my location?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6208
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\nWe may use location information to improve and personalize our Services for you.\nIf you do not want us to collect location information, you may disable that feature on your mobile device.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            7061,
+            7152
+          ],
+          "answer": "Games may use location-based tracking, which relies upon a mobile devices GPS coordinates.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; will my location be constantly tracked?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            3969,
+            4312
+          ],
+          "answer": "In other words, when you access the Site we are aware of your usage of the Site, and may gather, collect and record the information relating to such usage, including geo-location information, IP address, device and connection information, browser information and web-log information, and all communications recorded by Users through the Site.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does it collect location",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6208
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\nWe may use location information to improve and personalize our Services for you.\nIf you do not want us to collect location information, you may disable that feature on your mobile device.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            7061,
+            7152
+          ],
+          "answer": "Games may use location-based tracking, which relies upon a mobile devices GPS coordinates.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does it collect any of my contact's information",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            3092,
+            3400
+          ],
+          "answer": "We may also offer you the ability to import your contacts or manually enter e-mail addresses so that you can locate your contacts on PeopleFun and invite your contacts to join you in the Games.\nWe will store those contacts for purposes of helping you and your contacts make connections through our Services.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5526,
+            5617
+          ],
+          "answer": "We may also access your contacts to enable you to invite friends to join you in the Games.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does it record my location information?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6208
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\nWe may use location information to improve and personalize our Services for you.\nIf you do not want us to collect location information, you may disable that feature on your mobile device.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            7061,
+            7152
+          ],
+          "answer": "Games may use location-based tracking, which relies upon a mobile devices GPS coordinates.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; what type of identifiable information is passed between users on the platform",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            528,
+            847
+          ],
+          "answer": "  We collect information that you provide us or voluntarily share with other users, and also some general technical information that is automatically gathered by our systems, such as IP address, browser information and cookies to enable you to have a better user experience and a more personalized browsing experience.\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            4943,
+            5248
+          ],
+          "answer": "  Once you register, your username and additional information regarding your activity is made public and is visible to all Users of the Site.\nThis information includes photos you upload, your published portfolio, Gig information, ratings, and additional information you may choose to add to your profile.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does this app sell customer information?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            13330,
+            13448
+          ],
+          "answer": "We may share your information (in some cases personal information) with third parties in the following circumstances:\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            14539,
+            15633
+          ],
+          "answer": "5.3       Advertising of Third Party Products and Services\nWe do not actively share personal information with third party advertisers for their direct marketing purposes unless you give us your consent.\nWe may share (i) aggregated information (information about you and other users collectively, but not specifically identifiable to you); (ii) anonymous information; and (iii) certain technical information (including IP Addresses and mobile device IDs) to develop and deliver targeted advertising in the Games and on the websites of third parties.\nWe may also allow advertisers to collect these types of information within the Games and they may share it with us.\nAdvertisers may collect this information through the use of tracking technologies like browser cookies and web beacons.\nThe information collected may be used to offer you targeted ad-selection and delivery in order to personalize your user experience by ensuring that advertisements for products and services you see will appeal to you, a practice\nknown as behavioral advertising, and to undertake web and mobile analytics (i.e.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            15709,
+            16104
+          ],
+          "answer": "We may disclose aggregated and anonymous information to describe the Services to prospective partners, advertisers, and other third parties, and for other lawful purposes.\nWe may use aggregate, non-personally identifiable information for our own internal promotion or marketing purposes and we may share such aggregate non-personally identifiable information with others for marketing purposes.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            25008,
+            25762
+          ],
+          "answer": "We do not share personal information with third parties for their direct marketing purposes unless you affirmatively agree to such disclosure, typically by opting in to receive information from a third party that is participating in a sweepstakes or other promotion through our Services.\nIf you do ask us to share your personal information with a third party for its marketing purposes, we will only share information in connection with that specific promotion, as we do not share information with any third party (other than our service providers) on a continual basis.\nTo prevent disclosure of your personal information for use in direct marketing by a third party, do not opt in to such use when you provide personal information through our Services.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; can i delete my personally identifying information?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            32531,
+            32915
+          ],
+          "answer": "You may be able to correct Self-Reported Information entered into a survey, form, or feature within your account, such as on the surveys page, by clicking Edit your answers here. Please note that you may not be able to delete User Content that has been shared with others through the Service and that you may not be able to delete information that has been shared with third parties.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            35001,
+            36320
+          ],
+          "answer": "Account deletion If you no longer wish to participate in our Services, or no longer wish to have your Personal Information be processed, you may delete your 23andMe account and Personal Information within your Account Settings.\nOnce you submit your request, we will send an email to the email address linked to your 23andMe account detailing our account deletion policy and requesting that you to confirm your deletion request.\nOnce you confirm your request to delete your account and data, your account will no longer be accessible while we process your request.\nOnce you confirm your request, this process cannot be cancelled, undone, withdrawn, or reversed.\nWhen your account is deleted, all associated Personal Information is deleted and any stored samples are discarded, subject to the following limitations:\nInformation previously included in 23andMe Research.\nAs stated in any applicable Consent Document, Genetic Information and/or Self-Reported Information that you have previously provided and for which you have given consent to use in 23andMe Research cannot be removed from completed studies that use that information.\nYour data will not be included in studies that start more than 30 days after your account is closed (it may take up to 30 days to withdraw your information after your account is closed).\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            36350,
+            37091
+          ],
+          "answer": "23andMe and our third party genotyping laboratory will retain your Genetic Information, date of birth, and sex as required for compliance with applicable legal obligations, including the federal Clinical Laboratory Improvement Amendments of 1988 (CLIA) and CA Business and Professional Code Section 1265 and CAP accreditation requirements.\n23andMe will also retain limited information related to your account and data deletion request, including but not limited to, your email address, account deletion request identifier, and record of legal agreements for a limited period of time as required by contractual obligations, and/or as necessary for the establishment, exercise or defense of legal claims and for audit and compliance purposes.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            46602,
+            47020
+          ],
+          "answer": "You can request erasure of Personal Information that: (a) is no longer necessary in relation to the purposes for which it was collected or otherwise processed; (b) was collected in relation to processing to which you previously consented, but later withdrew such consent; or (c) was collected in relation to processing activities to which you object, and there are no overriding legitimate grounds for our processing.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does the app sell any personal information?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            13330,
+            13448
+          ],
+          "answer": "We may share your information (in some cases personal information) with third parties in the following circumstances:\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            14598,
+            16104
+          ],
+          "answer": "We do not actively share personal information with third party advertisers for their direct marketing purposes unless you give us your consent.\nWe may share (i) aggregated information (information about you and other users collectively, but not specifically identifiable to you); (ii) anonymous information; and (iii) certain technical information (including IP Addresses and mobile device IDs) to develop and deliver targeted advertising in the Games and on the websites of third parties.\nWe may also allow advertisers to collect these types of information within the Games and they may share it with us.\nAdvertisers may collect this information through the use of tracking technologies like browser cookies and web beacons.\nThe information collected may be used to offer you targeted ad-selection and delivery in order to personalize your user experience by ensuring that advertisements for products and services you see will appeal to you, a practice\nknown as behavioral advertising, and to undertake web and mobile analytics (i.e.\nto analyze traffic and other end user activity to improve your experience).\nWe may disclose aggregated and anonymous information to describe the Services to prospective partners, advertisers, and other third parties, and for other lawful purposes.\nWe may use aggregate, non-personally identifiable information for our own internal promotion or marketing purposes and we may share such aggregate non-personally identifiable information with others for marketing purposes.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; is the information encrypted",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            37854,
+            37965
+          ],
+          "answer": "23andMe uses industry standard security measures to encrypt Sensitive Information both at rest and in transit.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; will my data be shared with third party entities?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1006,
+            1116
+          ],
+          "answer": "Your information will not be shared with others and is only used internally for the purposes described below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; does the app save the address that my kit is shipped to?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            760,
+            1024
+          ],
+          "answer": "23andMe collects and stores the following types of Personal Information: Registration Information: information you provide about yourself when registering for and/or purchasing our Services (eg name, email, address, user ID and password, and payment information).\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            2350,
+            2636
+          ],
+          "answer": "When you purchase our Services or create a 23andMe account and register your kit, we collect Personal Information, such as your name, date of birth, billing and shipping address, payment information (eg, credit card) and contact information (eg email, phone number and license number).\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            23592,
+            23804
+          ],
+          "answer": "Our payment processor processes certain Registration Information, such as your billing address and credit card information, as necessary to enable you to purchase a 23andMe kit from the 23andMe.com online store.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; what information is shared",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1006,
+            1789
+          ],
+          "answer": "Your information will not be shared with others and is only used internally for the purposes described below:\nto provide our services or information you request, and to process and complete any transactions; to respond to your emails, submissions, questions, comments, requests, and complaints and provide customer service; to analyze usage and trends with anonymous user data, and to improve the quality of our service and user experience; to send you confirmations, updates, security alerts, and support and administrative messages and otherwise facilitate your use of, and our administration and operation of, our services; You are welcome to ask for our confirmation whenever you feel concerned about how your personal information is being processed, where and for what purpose.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; is my data shared with others?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1006,
+            1116
+          ],
+          "answer": "Your information will not be shared with others and is only used internally for the purposes described below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; is my information secure",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            23265,
+            24403
+          ],
+          "answer": "For Accounts registered directly with PeopleFun profile information is initially only available from the device that was used for registration.\nIf another device attempts to access your user information an email will be sent to the email address on record and you must grant approval to the new device by responding to that email.\nIt is important that you protect and maintain the security of your Account and that you immediately notify us of any unauthorized use of your Account.\nWe encrypt the transmission of all information using secure socket layer technology (SSL).\nWhile we take certain precautions against possible security breaches of our Services, no website or Internet transmission is completely secure, and we cannot guarantee that unauthorized access, hacking, data loss, or other breaches will never occur.\nAlthough we strive to protect your personal data, we cannot guarantee the security of your data while it is being transmitted through our Services; any transmission is at your own risk.\nOnce we have received your information, we have procedures and security features in place to try to prevent unauthorized access.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; what information of mine does it collect",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            1643,
+            1755
+          ],
+          "answer": "When you interact with our Services, we may collect and store information from you directly as described below:\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            1791,
+            1969
+          ],
+          "answer": "If you create an Account, you may be required to provide your name, e-mail address, a password and other information that helps us confirm that it is you accessing your account.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            2044,
+            2286
+          ],
+          "answer": "If you sign into the Site or Games with Facebook Connect we will collect information that is visible via your Facebook account such as: (1) your first and last name, (2) Facebook ID, (3) Profile Picture/URL, and (4) list of Facebook friends.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            2532,
+            3400
+          ],
+          "answer": "We may also offer you the option to complete a user profile that is visible to other PeopleFun users.\nYour user profile may include a profile photo, a PeopleFun username, your gender, biographic details that you provide, details about the Games you play, and a PeopleFun user ID number that is created by PeopleFun and used to identify your profile.\nThe PeopleFun username will be public and will be shown to other users, but will only permit access to information that is considered public or that you have designated as public in your user profile settings.\nWe may also offer you the ability to import your contacts or manually enter e-mail addresses so that you can locate your contacts on PeopleFun and invite your contacts to join you in the Games.\nWe will store those contacts for purposes of helping you and your contacts make connections through our Services.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            3430,
+            3913
+          ],
+          "answer": "When you order any good or service through the Game, including any virtual currency or virtual good, our payment processing service provider will collect your name, phone number, e-mail address, mailing address, billing address, and complete credit card information that enables them to receive your payment.\nOur payment processing service provider may also retain this information to enable you to purchase additional items through our Game without having to re-enter it each time.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            4055,
+            4387
+          ],
+          "answer": "When you ask for assistance from our Customer Support team, we will collect and store the contact information you provide (generally your name and e-mail address), information about your game play or activity on the Games, and your user name or ID number.\nWe will also store the correspondence and any information contained within.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            4888,
+            5729
+          ],
+          "answer": "When you access our Services, we may collect (i) certain technical information about your mobile device or computer system, including IP Address, mobile device ID (IDFA, Google Advertising ID or other identifiers), and the version of your operating system; and (ii) usage statistics about your interactions with the Games.\nIn certain Games we will create and assign to your device an identifier that is similar to an account number.\nWe may collect the name you have associated with your device, device type, telephone number, country, and any other information you choose to provide, such as user name, character name, or e-mail address.\nWe may also access your contacts to enable you to invite friends to join you in the Games.\nThis information is typically collected through the use of third-party mobile device software development kits.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6020
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; who all has access to my data?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1006,
+            1116
+          ],
+          "answer": "Your information will not be shared with others and is only used internally for the purposes described below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; who will have access to the info i enter into the application?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1006,
+            1116
+          ],
+          "answer": "Your information will not be shared with others and is only used internally for the purposes described below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; are there any advertisements within the wordscapes app that could lead me to third party sites?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            16104,
+            16217
+          ],
+          "answer": "Our Services may contain advertisements from companies other than PeopleFun that may link to their own websites.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; what information do you collect?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            528,
+            847
+          ],
+          "answer": "  We collect information that you provide us or voluntarily share with other users, and also some general technical information that is automatically gathered by our systems, such as IP address, browser information and cookies to enable you to have a better user experience and a more personalized browsing experience.\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            3358,
+            5248
+          ],
+          "answer": "  When you register to the Site we ask you to provide certain personal information, including a valid email address, location, facebook or google account log in details and username.\nWe may collect additional information such as physical address, telephone number or other contact details and additional authentication information, to provide you with the services you need (such as payment or withdrawal of funds, sending physical goods), or to ensure the marketplace integrity (for example, prevention of fraud).\n  In addition, we collect information while you access, browse, view or otherwise use the Site.\nIn other words, when you access the Site we are aware of your usage of the Site, and may gather, collect and record the information relating to such usage, including geo-location information, IP address, device and connection information, browser information and web-log information, and all communications recorded by Users through the Site.\nWe use that information to enhance user experience, personalize your browsing experience as well as monitor the Site for preventing fraud and inappropriate content or behaviour.\nWe may also collect supplemental information obtained from third parties such as demographic and navigation data.\n  Additionally, in order to improve your online experience at Fiverr, we have implemented impression reporting.\nWhile you view our ads, we may gather user Global Unique Identifier, HTTP request data like, user agent, IP, host, url, country/continent from which request made, browser info, device/operating system/operating system version.\n  Once you register, your username and additional information regarding your activity is made public and is visible to all Users of the Site.\nThis information includes photos you upload, your published portfolio, Gig information, ratings, and additional information you may choose to add to your profile.\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            5626,
+            5924
+          ],
+          "answer": "We also collect technical information indirectly and automatically through our systems.\nThis information may include logging your Internet Protocol (IP) address, software configuration, operating system and use of cookies (cookies are small files sent from us to your computer and sometimes back).\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; would there be a way to see what data you collect?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            368,
+            798
+          ],
+          "answer": "When using TickTick, we ask certain information from you:\n Personal Information: When registering for TickTick, we collect personal information such as your name.\nUsers who contact us via email, the email addresses and information you submitted voluntarily will also be collected.\n Non-Personal Information: It includes but is not limited to your devices configuration, the package ID and version of the application that you use.\n"
+        },
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            2422,
+            2524
+          ],
+          "answer": "You can generate a copy of your data at any time, free of charge, in an electronic format on the Web.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; who can see which tasks i hire workers for?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            3873,
+            4312
+          ],
+          "answer": "  In addition, we collect information while you access, browse, view or otherwise use the Site.\nIn other words, when you access the Site we are aware of your usage of the Site, and may gather, collect and record the information relating to such usage, including geo-location information, IP address, device and connection information, browser information and web-log information, and all communications recorded by Users through the Site.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; is my privacy secured?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            23265,
+            24403
+          ],
+          "answer": "For Accounts registered directly with PeopleFun profile information is initially only available from the device that was used for registration.\nIf another device attempts to access your user information an email will be sent to the email address on record and you must grant approval to the new device by responding to that email.\nIt is important that you protect and maintain the security of your Account and that you immediately notify us of any unauthorized use of your Account.\nWe encrypt the transmission of all information using secure socket layer technology (SSL).\nWhile we take certain precautions against possible security breaches of our Services, no website or Internet transmission is completely secure, and we cannot guarantee that unauthorized access, hacking, data loss, or other breaches will never occur.\nAlthough we strive to protect your personal data, we cannot guarantee the security of your data while it is being transmitted through our Services; any transmission is at your own risk.\nOnce we have received your information, we have procedures and security features in place to try to prevent unauthorized access.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; will the application make money off of the info i enter in the app?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1006,
+            1116
+          ],
+          "answer": "Your information will not be shared with others and is only used internally for the purposes described below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; can i control the information that is presented to potential employers?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            4943,
+            5248
+          ],
+          "answer": "  Once you register, your username and additional information regarding your activity is made public and is visible to all Users of the Site.\nThis information includes photos you upload, your published portfolio, Gig information, ratings, and additional information you may choose to add to your profile.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; do third parties have access to my data?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1006,
+            1116
+          ],
+          "answer": "Your information will not be shared with others and is only used internally for the purposes described below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; do you sell my genetic data?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            15349,
+            16534
+          ],
+          "answer": "To allow you to share your Personal Information for 23andMe Research purposes You have the choice to participate in 23andMe Research by providing your consent.\n\"23andMe Research\" refers to research aimed at publication in peer-reviewed journals and other research funded by the federal government (such as the National Institutes of Health - NIH) conducted by 23andMe.\n23andMe Research may be sponsored by, conducted on behalf of, or in collaboration with third parties, such as non-profit foundations, academic institutions or pharmaceutical companies.\n23andMe Research may study a specific group or population, identify potential areas or targets for therapeutics development, conduct or support the development of drugs, diagnostics or devices to diagnose, predict or treat medical or other health conditions, work with public, private and/or non-profit entities on genetic research initiatives, or otherwise create, commercialize, and apply this new knowledge to improve health care.\n23andMe Research uses Aggregate and/or Individual-level Genetic Information and Self-Reported Information as specified in the appropriate Consent Document(s), as explained in greater detail below.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            16755,
+            16935
+          ],
+          "answer": "Your Genetic Information and/or Self-Reported Information will be used for research purposes, but it will be de-identified and will not be linked to your Registration Information.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            17233,
+            17584
+          ],
+          "answer": "If you have completed the Individual Level Data Sharing Consent, or additional consent agreement, in addition to the uses above under the Main Consent Document, 23andMe may share De-identified Individual-level Genetic Information and Self-Reported Information with select third party research collaborators for 23andMe partners for Research purposes.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            18455,
+            18791
+          ],
+          "answer": "If you choose not to complete a Consent Document or any additional agreement with 23andMe, your Personal Information will not be used for 23andMe Research.\nHowever, your Genetic Information and Self-Reported Information may still be used by us and shared with our third party service providers to as outlined in this Privacy Statement.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            23008,
+            23199
+          ],
+          "answer": "We share the information described above in Section 2 with our third party service providers, as necessary for them to provide their services to us and help us perform our contract with you.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            24684,
+            25009
+          ],
+          "answer": "During kit registration, you are asked to review our Consent Document for Sample Storage and Additional Genetic Analyses.\nUnless you consent to Biobanking and additional analyses, your saliva sample and DNA are destroyed after the laboratory completes its work, subject to the laboratory's legal and regulatory requirements.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            25216,
+            25377
+          ],
+          "answer": "(Account Deletion) our contracted genotyping laboratory will retain certain information as necessary to comply with applicable regulatory and legal obligations.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            26154,
+            26398
+          ],
+          "answer": "When you use our Services, including our website or mobile app(s), our third party service providers may collect Web-Behavior Information about your visit, such as the links you clicked on, the duration of your visit, and the URLs you visited.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            27671,
+            28872
+          ],
+          "answer": "Aggregate information We may share Aggregate Information, which is information that has been stripped of your name and contact information and combined with information of others so that you cannot reasonably be identified as an individual, with third parties.\nThis Information is different from \"Individual-level\" information and is not Personal Information because it does not identify any particular individual or disclose any particular individuals data.\nFor example, Aggregate Information may include a statement that \"30% of our female users share a particular genetic trait,\" without providing any data or testing results specific to any individual user.\nIn contrast, Individual-level Genetic Information or Self-Reported Information consists of data about a single individual's genotypes, diseases or other traits/characteristics information and could reveal whether a specific user has a particular genetic trait, or consist of all of the Genetic Information about that user.\n23andMe will ask for your consent to share Individual-level Genetic Information or Self-Reported Information with any third party, other than our service providers as necessary for us to provide the Services to you.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            29318,
+            29533
+          ],
+          "answer": "We may provide additional notice and ask for your prior consent if we wish to share your Personal Information with our commonly owned entities in a materially different way than discussed in this Privacy Statement.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            30710,
+            31061
+          ],
+          "answer": "NOTE: If you are participating in 23andMe Research, 23andMe will withhold disclosure of your Personal Information involved in such Research in response to judicial or other government subpoenas, warrants or orders in accordance with any applicable Certificate of Confidentiality that 23andMe has obtained from the National Institutes of Health (NIH).\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            31187,
+            31433
+          ],
+          "answer": "Business transactions In the event that 23andMe goes through a business transition such as a merger, acquisition by another company, or sale of all or a portion of its assets your Personal Information will likely be among the assets transferred.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does this app need access to any of my social media accounts?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            2044,
+            2286
+          ],
+          "answer": "If you sign into the Site or Games with Facebook Connect we will collect information that is visible via your Facebook account such as: (1) your first and last name, (2) Facebook ID, (3) Profile Picture/URL, and (4) list of Facebook friends.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; can it view my real name?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            426,
+            531
+          ],
+          "answer": " Personal Information: When registering for TickTick, we collect personal information such as your name.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; what will you do with my dna?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            13578,
+            13918
+          ],
+          "answer": "Once we receive your raw Genetic Information from the laboratory, we further analyze it to provide you with our health and/or ancestry reports, dependent on the Service purchased.\n23andMe continuously works to improve our Services based on our research and product development, and genetic associations identified in scientific literature.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            15349,
+            18791
+          ],
+          "answer": "To allow you to share your Personal Information for 23andMe Research purposes You have the choice to participate in 23andMe Research by providing your consent.\n\"23andMe Research\" refers to research aimed at publication in peer-reviewed journals and other research funded by the federal government (such as the National Institutes of Health - NIH) conducted by 23andMe.\n23andMe Research may be sponsored by, conducted on behalf of, or in collaboration with third parties, such as non-profit foundations, academic institutions or pharmaceutical companies.\n23andMe Research may study a specific group or population, identify potential areas or targets for therapeutics development, conduct or support the development of drugs, diagnostics or devices to diagnose, predict or treat medical or other health conditions, work with public, private and/or non-profit entities on genetic research initiatives, or otherwise create, commercialize, and apply this new knowledge to improve health care.\n23andMe Research uses Aggregate and/or Individual-level Genetic Information and Self-Reported Information as specified in the appropriate Consent Document(s), as explained in greater detail below.\nYour De-identified Genetic and Self-Reported Information may be used for 23andMe Research only if you have consented to this use by completing a Consent Document.\nIf you have completed the Main Research Consent Document:\nYour Genetic Information and/or Self-Reported Information will be used for research purposes, but it will be de-identified and will not be linked to your Registration Information.\n23andMe may use individual-level Genetic Information and Self-Reported Information internally at 23andMe for research purposes.\n23andMe may share summary statistics, which do not identify any particular individual or contain individual-level information, with our qualified research collaborators.\nIf you have completed the Individual Level Data Sharing Consent, or additional consent agreement, in addition to the uses above under the Main Consent Document, 23andMe may share De-identified Individual-level Genetic Information and Self-Reported Information with select third party research collaborators for 23andMe partners for Research purposes.\nWithdrawing your Consent.\nYou may withdraw your consent to participate in 23andMe Research at any time by changing your consent status within your Account Settings.\nIf you experience difficulties changing your consent status, contact the Human Protections Administrator at hpa@23andMe.com.\n23andMe will not include your Genetic Information or Self-Reported Information in studies that start more than 30 days after you withdraw (it may take up to 30 days to withdraw your information after you withdraw your consent).\nAny research involving your data that has already been performed or published prior to your withdrawal from 23andMe Research will not be reversed, undone, or withdrawn.\nYou may also discontinue your participation in 23andMe Research by deleting your 23andMe account (as described in section 5.d).\nWhat happens if you do NOT consent to 23andMe Research?\nIf you choose not to complete a Consent Document or any additional agreement with 23andMe, your Personal Information will not be used for 23andMe Research.\nHowever, your Genetic Information and Self-Reported Information may still be used by us and shared with our third party service providers to as outlined in this Privacy Statement.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            19128,
+            19624
+          ],
+          "answer": "To recruit you for external research Research is an important aspect of 23andMes Services and we want to ensure interested participants are aware of additional opportunities to contribute to interesting, novel scientific research conducted by academic institutions, healthcare organizations, pharmaceutical companies, and other groups.\nIf you have chosen to participate in 23andMe Research, from time to time we may inform you of third party research opportunities for which you may be eligible.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            19978,
+            20113
+          ],
+          "answer": "However we will not share Individual-level Genetic Information or Self-Reported Information with any third party without your consent.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; does this app capture my ip address?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            368,
+            426
+          ],
+          "answer": "When using TickTick, we ask certain information from you:\n"
+        },
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            649,
+            798
+          ],
+          "answer": " Non-Personal Information: It includes but is not limited to your devices configuration, the package ID and version of the application that you use.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; how is my info protected from hackers?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            19890,
+            20888
+          ],
+          "answer": "  We take great care in maintaining the security of the Site and your information and in preventing unauthorized access, loss, misuse, alteration, destruction or damage to it through industry standard technologies and internal procedures.\nWe contractually ensure that any third party processing your personal information equally provide for confidentiality and integrity of your data in a secure way.\nThe transmission of data via the internet is not completely secure, and although we will do our best to protect your personal information, we cannot guarantee the security of your data transmitted to the Site; any transmission is at your own risk.\nOnce we have received your data, we will use strict procedures and security features to try to prevent unauthorized access.\n  Users who have registered to the Site agree to keep their password in strict confidence and not disclose such password to any third party.\n  Further information about our data security practices can be provided on request.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does it collect my location?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6208
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\nWe may use location information to improve and personalize our Services for you.\nIf you do not want us to collect location information, you may disable that feature on your mobile device.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            7061,
+            7152
+          ],
+          "answer": "Games may use location-based tracking, which relies upon a mobile devices GPS coordinates.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; will you destroy my dna sample when you are finished?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            8411,
+            8631
+          ],
+          "answer": "Unless you consent to sample storage (Biobanking) and additional analyses, your saliva sample and DNA are destroyed after the laboratory completes its work, subject to the laboratory's legal and regulatory requirements.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            24806,
+            25009
+          ],
+          "answer": "Unless you consent to Biobanking and additional analyses, your saliva sample and DNA are destroyed after the laboratory completes its work, subject to the laboratory's legal and regulatory requirements.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; is there a way to opt out of data sharing",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1006,
+            1789
+          ],
+          "answer": "Your information will not be shared with others and is only used internally for the purposes described below:\nto provide our services or information you request, and to process and complete any transactions; to respond to your emails, submissions, questions, comments, requests, and complaints and provide customer service; to analyze usage and trends with anonymous user data, and to improve the quality of our service and user experience; to send you confirmations, updates, security alerts, and support and administrative messages and otherwise facilitate your use of, and our administration and operation of, our services; You are welcome to ask for our confirmation whenever you feel concerned about how your personal information is being processed, where and for what purpose.\n"
+        },
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1920,
+            2073
+          ],
+          "answer": "Users can disable cookies in their own browser settings, but please note that you may not be able to access certain features on our Website as a result.\n"
+        },
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            2600,
+            2719
+          ],
+          "answer": "You can voluntarily delete your TickTick account at any time on the Web and have all your data erased from our server.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does the wordscapes app have access to my location?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6208
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\nWe may use location information to improve and personalize our Services for you.\nIf you do not want us to collect location information, you may disable that feature on your mobile device.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            7061,
+            7152
+          ],
+          "answer": "Games may use location-based tracking, which relies upon a mobile devices GPS coordinates.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does the app contain third party ads?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            9215,
+            9351
+          ],
+          "answer": "Some third-party services providers that we engage (including third-party advertisers) may also place their own Cookies on your device.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            14598,
+            15709
+          ],
+          "answer": "We do not actively share personal information with third party advertisers for their direct marketing purposes unless you give us your consent.\nWe may share (i) aggregated information (information about you and other users collectively, but not specifically identifiable to you); (ii) anonymous information; and (iii) certain technical information (including IP Addresses and mobile device IDs) to develop and deliver targeted advertising in the Games and on the websites of third parties.\nWe may also allow advertisers to collect these types of information within the Games and they may share it with us.\nAdvertisers may collect this information through the use of tracking technologies like browser cookies and web beacons.\nThe information collected may be used to offer you targeted ad-selection and delivery in order to personalize your user experience by ensuring that advertisements for products and services you see will appeal to you, a practice\nknown as behavioral advertising, and to undertake web and mobile analytics (i.e.\nto analyze traffic and other end user activity to improve your experience).\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            16104,
+            16217
+          ],
+          "answer": "Our Services may contain advertisements from companies other than PeopleFun that may link to their own websites.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; can i delete my personally identifying information?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            2600,
+            2833
+          ],
+          "answer": "You can voluntarily delete your TickTick account at any time on the Web and have all your data erased from our server.\nPersonal information such as purchase history shall not be further processed or used for any commercial purposes.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; how does fiverr ensure payments to freelancers are secure?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            12368,
+            12742
+          ],
+          "answer": "We do not collect credit information; but allow our payment vendors to collect information for the purpose of collecting payments from buyers on the Site or transferring payments to sellers on the Site.\nWe are not exposed to the payment information provided to our payment vendors, and this information is subject to the privacy policy applicable to the payment vendor; and\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            19890,
+            20804
+          ],
+          "answer": "  We take great care in maintaining the security of the Site and your information and in preventing unauthorized access, loss, misuse, alteration, destruction or damage to it through industry standard technologies and internal procedures.\nWe contractually ensure that any third party processing your personal information equally provide for confidentiality and integrity of your data in a secure way.\nThe transmission of data via the internet is not completely secure, and although we will do our best to protect your personal information, we cannot guarantee the security of your data transmitted to the Site; any transmission is at your own risk.\nOnce we have received your data, we will use strict procedures and security features to try to prevent unauthorized access.\n  Users who have registered to the Site agree to keep their password in strict confidence and not disclose such password to any third party.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; who sees my data",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1006,
+            1116
+          ],
+          "answer": "Your information will not be shared with others and is only used internally for the purposes described below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does the wordscapes app collect any personally identifiable information like my name or email?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            1791,
+            1969
+          ],
+          "answer": "If you create an Account, you may be required to provide your name, e-mail address, a password and other information that helps us confirm that it is you accessing your account.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            2044,
+            2286
+          ],
+          "answer": "If you sign into the Site or Games with Facebook Connect we will collect information that is visible via your Facebook account such as: (1) your first and last name, (2) Facebook ID, (3) Profile Picture/URL, and (4) list of Facebook friends.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            4055,
+            4311
+          ],
+          "answer": "When you ask for assistance from our Customer Support team, we will collect and store the contact information you provide (generally your name and e-mail address), information about your game play or activity on the Games, and your user name or ID number.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5321,
+            5526
+          ],
+          "answer": "We may collect the name you have associated with your device, device type, telephone number, country, and any other information you choose to provide, such as user name, character name, or e-mail address.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; is my reminder data saved anywhere?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            798,
+            1789
+          ],
+          "answer": " We collect and hold only the information absolutely necessary for using our services, as well as limiting the internal access to your personal information for the purposes stated in Information Usage below.\nYour information will not be shared with others and is only used internally for the purposes described below:\nto provide our services or information you request, and to process and complete any transactions; to respond to your emails, submissions, questions, comments, requests, and complaints and provide customer service; to analyze usage and trends with anonymous user data, and to improve the quality of our service and user experience; to send you confirmations, updates, security alerts, and support and administrative messages and otherwise facilitate your use of, and our administration and operation of, our services; You are welcome to ask for our confirmation whenever you feel concerned about how your personal information is being processed, where and for what purpose.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; is any information recorded",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            2350,
+            2636
+          ],
+          "answer": "When you purchase our Services or create a 23andMe account and register your kit, we collect Personal Information, such as your name, date of birth, billing and shipping address, payment information (eg, credit card) and contact information (eg email, phone number and license number).\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            2663,
+            3129
+          ],
+          "answer": "You have the option to provide us with additional information about yourself through surveys, forms, features and applications.\nFor example, you may provide us with information about your personal traits (eg, eye color, height), ethnicity, disease conditions (eg Type 2 Diabetes), other health-related information (eg pulse rate, cholesterol levels, visual acuity), and family history information (eg information similar to the foregoing about your family members).\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            3272,
+            3543
+          ],
+          "answer": "Some of our Services allow you to create and post or upload content, such as data, text, software, music, audio, photographs, graphics, video, messages, or other materials that you create or provide to us through either a public or private transmission (\"User Content\").\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            4367,
+            4564
+          ],
+          "answer": "You may be required to register with a third party application to post a comment.\nTo learn how the third party application uses your information, please review the third party's privacy statement.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            4599,
+            5115
+          ],
+          "answer": "Our Services include Social Media Features, such as the Facebook \"Like\" or \"Share\" button and widgets (\"Features\").\nThese Features may collect your IP address, which page you are visiting on our site, and may set a cookie to enable the Feature to function properly.\nThey may also allow third-party social media services to provide us information about you, including your name, email address, and other contact information.\nThe information we receive is dependent upon your privacy settings with the social network.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            5191,
+            5313
+          ],
+          "answer": "Your interactions with these Features are governed by the privacy statements of the third party companies providing them.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            5525,
+            6192
+          ],
+          "answer": "If you use a third party site, such as Facebook or Twitter, in connection with our Services to communicate with another person (eg, to make or post referrals or to request that we communicate with another person), then in addition to that person's name and contact information, we may also collect other information (eg, your profile picture, network, gender, username, user ID, age range, language, country, friends lists or followers) depending on your privacy settings on the third party site.\nWe do not control the third party site's information practices, so please review the third partys privacy statement and your settings on the third partys site carefully.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            6226,
+            6563
+          ],
+          "answer": "When you refer a person to 23andMe or choose to share your 23andMe results with another person, we will ask for that person's email address.\nWe will use their email address solely, as applicable, to make the referral or to communicate your sharing request to them, and we will let your contact know that you requested the communication.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            7982,
+            8776
+          ],
+          "answer": "To use our genetic testing services, you must purchase, or receive as a gift, a 23andMe Personal Genetic Service testing kit, create an online account and register your kit, and ship your saliva sample to our third party laboratory.\nOur laboratory will extract your DNA from your saliva sample for analysis.\nDuring kit registration you are asked to review our Consent Document for Sample Storage and Additional Genetic Analyses.\nUnless you consent to sample storage (Biobanking) and additional analyses, your saliva sample and DNA are destroyed after the laboratory completes its work, subject to the laboratory's legal and regulatory requirements.\nYou can update your sample storage preference to discard a stored sample within your Account Settings once your sample has completed processing.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            8797,
+            9484
+          ],
+          "answer": "Information regarding your genotype (eg the As, Ts, Cs, and Gs at particular locations in your genome), your Genetic Information, is generated when we analyze and process your saliva sample, or when you otherwise contribute or access your Genetic Information through our Services.\nGenetic Information includes the 23andMe results reported to you as part of our Services, and may be used for other purposes, as outlined in Section 3 below.\nWeb-Behavior Information collected through tracking technology (eg from cookies and similar technologies) We and our third party service providers use cookies and similar technologies (such as web beacons, tags, scripts and device identifiers) to:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; how is information used?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            3541,
+            3873
+          ],
+          "answer": "We may collect additional information such as physical address, telephone number or other contact details and additional authentication information, to provide you with the services you need (such as payment or withdrawal of funds, sending physical goods), or to ensure the marketplace integrity (for example, prevention of fraud).\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            4312,
+            4490
+          ],
+          "answer": "We use that information to enhance user experience, personalize your browsing experience as well as monitor the Site for preventing fraud and inappropriate content or behaviour.\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            6512,
+            9052
+          ],
+          "answer": "   our use of your personal information is necessary to perform a contract or take steps to enter into a contract with you (e.g.\nto provide you with services which you have purchased);\n   the processing is necessary to comply with a relevant legal obligation or regulatory obligation that we have (e.g.\nfraud prevention); or\n   the processing is necessary to support our legitimate interests as a business (e.g.\nto improve our services to you or to customise your browsing experience), subject to your interests and fundamental rights and provided it is conducted at all times in a way that is proportionate.\nWe will use your personal information for the following purposes:\n   to provide you with quality service and security.\nFor example, we may use the information collected from you to verify your identity.\nWe may also use this information to establish and set up your account, verify or re-issue a password, log your activity and contact you from time to time.\nThe information helps us improve our services to you and customize your browsing experience.\nIn addition, this information helps us track any fraudulent activities and other inappropriate activities and monitor content integrity; or\n   to maintain appropriate business records, to comply with lawful requests by public authorities and to comply with applicable laws and regulations or as otherwise required by law.\nShould you ever deactivate your account with us, we will keep your information for a limited period in order to meet the above purposes.\n  We will ask for your consent before using information for a purpose other than those set out in this Policy.\nDirect marketing:\n   We may use your personal information to send you direct marketing communications about our products, services or promotions from Fiverr that may be of interest to you or our related services.\nThis may be via email, post, SMS, telephone or targeted online advertisements.\n   In most cases our processing of your personal information for marketing purposes is based on our legitimate interest, although some cases (such as where required by law) may be based on your consent.\nYou have a right to prevent direct marketing of any form at any time - this can be exercised by following the opt-out link attached to each communication or by sending an email to optout@fiverr.com.\n   We take steps to limit direct marketing to a reasonable and proportionate level, and to send you communications which we believe may be of interest or relevance to you, based on the information we have about you.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; does the app share information with any third parties?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            1006,
+            1116
+          ],
+          "answer": "Your information will not be shared with others and is only used internally for the purposes described below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; who can see my information?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            3969,
+            4312
+          ],
+          "answer": "In other words, when you access the Site we are aware of your usage of the Site, and may gather, collect and record the information relating to such usage, including geo-location information, IP address, device and connection information, browser information and web-log information, and all communications recorded by Users through the Site.\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            10829,
+            11080
+          ],
+          "answer": "  We may provide your personal details to third parties, only in order to operate the Site, provide our services to you, fulfil obligations imposed on us by applicable laws and regulations, and prevent fraud and illegal activities, as detailed below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; is my data anonymized?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            184,
+            451
+          ],
+          "answer": "De-identified Information: information that has been stripped of your Registration Information (eg, your name and contact information) and other identifying data such that you cannot reasonably be identified as an individual, also known as pseudonymized information.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            3914,
+            4041
+          ],
+          "answer": "To request that we remove or de-identify your Personal Information from our blog or Forums, contact us at privacy@23andme.com.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            37627,
+            37842
+          ],
+          "answer": "Registration Information is stripped from Sensitive Information, including Genetic and Self-Reported Information.\nThis data is then assigned a randomly generated ID so an individual cannot reasonably be identified.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; can other parties see my information",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            3969,
+            4312
+          ],
+          "answer": "In other words, when you access the Site we are aware of your usage of the Site, and may gather, collect and record the information relating to such usage, including geo-location information, IP address, device and connection information, browser information and web-log information, and all communications recorded by Users through the Site.\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            4943,
+            5248
+          ],
+          "answer": "  Once you register, your username and additional information regarding your activity is made public and is visible to all Users of the Site.\nThis information includes photos you upload, your published portfolio, Gig information, ratings, and additional information you may choose to add to your profile.\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            10829,
+            11080
+          ],
+          "answer": "  We may provide your personal details to third parties, only in order to operate the Site, provide our services to you, fulfil obligations imposed on us by applicable laws and regulations, and prevent fraud and illegal activities, as detailed below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; will this app sell my information to any 3rd parties?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            13330,
+            13448
+          ],
+          "answer": "We may share your information (in some cases personal information) with third parties in the following circumstances:\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            14539,
+            15633
+          ],
+          "answer": "5.3       Advertising of Third Party Products and Services\nWe do not actively share personal information with third party advertisers for their direct marketing purposes unless you give us your consent.\nWe may share (i) aggregated information (information about you and other users collectively, but not specifically identifiable to you); (ii) anonymous information; and (iii) certain technical information (including IP Addresses and mobile device IDs) to develop and deliver targeted advertising in the Games and on the websites of third parties.\nWe may also allow advertisers to collect these types of information within the Games and they may share it with us.\nAdvertisers may collect this information through the use of tracking technologies like browser cookies and web beacons.\nThe information collected may be used to offer you targeted ad-selection and delivery in order to personalize your user experience by ensuring that advertisements for products and services you see will appeal to you, a practice\nknown as behavioral advertising, and to undertake web and mobile analytics (i.e.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            15709,
+            16104
+          ],
+          "answer": "We may disclose aggregated and anonymous information to describe the Services to prospective partners, advertisers, and other third parties, and for other lawful purposes.\nWe may use aggregate, non-personally identifiable information for our own internal promotion or marketing purposes and we may share such aggregate non-personally identifiable information with others for marketing purposes.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            25008,
+            25762
+          ],
+          "answer": "We do not share personal information with third parties for their direct marketing purposes unless you affirmatively agree to such disclosure, typically by opting in to receive information from a third party that is participating in a sweepstakes or other promotion through our Services.\nIf you do ask us to share your personal information with a third party for its marketing purposes, we will only share information in connection with that specific promotion, as we do not share information with any third party (other than our service providers) on a continual basis.\nTo prevent disclosure of your personal information for use in direct marketing by a third party, do not opt in to such use when you provide personal information through our Services.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; is my information shared with any third parties?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            15349,
+            16534
+          ],
+          "answer": "To allow you to share your Personal Information for 23andMe Research purposes You have the choice to participate in 23andMe Research by providing your consent.\n\"23andMe Research\" refers to research aimed at publication in peer-reviewed journals and other research funded by the federal government (such as the National Institutes of Health - NIH) conducted by 23andMe.\n23andMe Research may be sponsored by, conducted on behalf of, or in collaboration with third parties, such as non-profit foundations, academic institutions or pharmaceutical companies.\n23andMe Research may study a specific group or population, identify potential areas or targets for therapeutics development, conduct or support the development of drugs, diagnostics or devices to diagnose, predict or treat medical or other health conditions, work with public, private and/or non-profit entities on genetic research initiatives, or otherwise create, commercialize, and apply this new knowledge to improve health care.\n23andMe Research uses Aggregate and/or Individual-level Genetic Information and Self-Reported Information as specified in the appropriate Consent Document(s), as explained in greater detail below.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            16755,
+            16935
+          ],
+          "answer": "Your Genetic Information and/or Self-Reported Information will be used for research purposes, but it will be de-identified and will not be linked to your Registration Information.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            17233,
+            17584
+          ],
+          "answer": "If you have completed the Individual Level Data Sharing Consent, or additional consent agreement, in addition to the uses above under the Main Consent Document, 23andMe may share De-identified Individual-level Genetic Information and Self-Reported Information with select third party research collaborators for 23andMe partners for Research purposes.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            18455,
+            18791
+          ],
+          "answer": "If you choose not to complete a Consent Document or any additional agreement with 23andMe, your Personal Information will not be used for 23andMe Research.\nHowever, your Genetic Information and Self-Reported Information may still be used by us and shared with our third party service providers to as outlined in this Privacy Statement.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            23008,
+            25180
+          ],
+          "answer": "We share the information described above in Section 2 with our third party service providers, as necessary for them to provide their services to us and help us perform our contract with you.\nService providers are third parties (other companies or individuals) that help us to provide, analyze and improve our Services.\nWhile 23andMe directly conducts the majority of data processing activities required to provide our Services to you, we engage some third party service providers to assist in supporting our Services, including in the following areas:\nOrder fulfillment and shipping.\nOur payment processor processes certain Registration Information, such as your billing address and credit card information, as necessary to enable you to purchase a 23andMe kit from the 23andMe.com online store.\nOur distribution centers ship your kit(s) to you, and in some cases help return your kit safely to our third party laboratory so your sample can be processed.\nOur CLIA-certified genotyping lab.\nTo use our genetic testing services, you must purchase, or receive as a gift, a 23andMe Personal Genetic Service testing kit, and ship your saliva sample to our third party laboratory.\nOnce delivered, receiving personnel at the laboratory remove and discard kit packaging, which in some cases may contain \"sender information\" (eg, name, address), before testing personnel receive the samples for processing.\nReceiving personnel do not perform testing, and testing personnel handle saliva samples that are only identified by a unique barcode.\nWhen the laboratory has completed their analysis, they securely send the resulting Genetic Information to us identified by your unique barcode.\nDuring kit registration, you are asked to review our Consent Document for Sample Storage and Additional Genetic Analyses.\nUnless you consent to Biobanking and additional analyses, your saliva sample and DNA are destroyed after the laboratory completes its work, subject to the laboratory's legal and regulatory requirements.\nShould you wish to update your sample storage preference to discard a stored sample, you can do so within your Account Settings once your sample has completed processing.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            25216,
+            25377
+          ],
+          "answer": "(Account Deletion) our contracted genotyping laboratory will retain certain information as necessary to comply with applicable regulatory and legal obligations.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            25400,
+            25499
+          ],
+          "answer": "Our Customer Care team uses a number of tools to help organize and manage the requests we receive.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            25600,
+            26129
+          ],
+          "answer": "Our cloud storage providers provide secure storage for information in 23andMe databases, ensure that our infrastructure can support continued use of our Services by 23andMe customers, and protect data in the event of a natural disaster or other disruption to the Service.\nOur IT and security providers assist with intrusion detection and prevention measures to stop any potential attacks against our networks.\nWe have these third party experts perform regular penetration tests and periodically audit 23andMes security controls.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            26154,
+            26489
+          ],
+          "answer": "When you use our Services, including our website or mobile app(s), our third party service providers may collect Web-Behavior Information about your visit, such as the links you clicked on, the duration of your visit, and the URLs you visited.\nThis information can help us improve site navigability and assess our Marketing campaigns.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            27063,
+            27586
+          ],
+          "answer": "\"Targeted advertising\" service providers We permit third party advertising networks and providers to collect Web-Behavior Information regarding the use of our Services to help us to deliver targeted online advertisements (\"ads\") to you.\nThey use cookies and similar technologies, to gather information about your browser's or device's visits and usage patterns on our Services and on other websites over time, which helps to better personalize ads to match your interests, and to measure the effectiveness of ad campaigns.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            27671,
+            30659
+          ],
+          "answer": "Aggregate information We may share Aggregate Information, which is information that has been stripped of your name and contact information and combined with information of others so that you cannot reasonably be identified as an individual, with third parties.\nThis Information is different from \"Individual-level\" information and is not Personal Information because it does not identify any particular individual or disclose any particular individuals data.\nFor example, Aggregate Information may include a statement that \"30% of our female users share a particular genetic trait,\" without providing any data or testing results specific to any individual user.\nIn contrast, Individual-level Genetic Information or Self-Reported Information consists of data about a single individual's genotypes, diseases or other traits/characteristics information and could reveal whether a specific user has a particular genetic trait, or consist of all of the Genetic Information about that user.\n23andMe will ask for your consent to share Individual-level Genetic Information or Self-Reported Information with any third party, other than our service providers as necessary for us to provide the Services to you.\nInformation we share with commonly owned entities We may share some or all of your Personal Information with other companies under common ownership or control of 23andMe, which may include our subsidiaries, our corporate parent, or any other subsidiaries owned by our corporate parent in order to provide you better service and improve user experience.\nGenerally, sharing such information is necessary for us to perform on our contract with you.\nWe may provide additional notice and ask for your prior consent if we wish to share your Personal Information with our commonly owned entities in a materially different way than discussed in this Privacy Statement.\nAs required by law Under certain circumstances your Personal Information may be subject to processing pursuant to laws, regulations, judicial or other government subpoenas, warrants, or orders.\nFor example, we may be required to disclose Personal Information in coordination with regulatory authorities in response to lawful requests by public authorities, including to meet national security or law enforcement requirements.\n23andMe will preserve and disclose any and all information to law enforcement agencies or others if required to do so by law or in the good faith belief that such preservation or disclosure is reasonably necessary to: (a) comply with legal or regulatory process (such as a judicial proceeding, court order, or government inquiry) or obligations that 23andMe may owe pursuant to ethical and other professional rules, laws, and regulations; (b) enforce the 23andMe Terms of Service and other policies; (c) respond to claims that any content violates the rights of third parties; or (d) protect the rights, property, or personal safety of 23andMe, its employees, its users, its clients, and the public.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            30710,
+            31061
+          ],
+          "answer": "NOTE: If you are participating in 23andMe Research, 23andMe will withhold disclosure of your Personal Information involved in such Research in response to judicial or other government subpoenas, warrants or orders in accordance with any applicable Certificate of Confidentiality that 23andMe has obtained from the National Institutes of Health (NIH).\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; who can see the jobs that i post?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            3969,
+            4312
+          ],
+          "answer": "In other words, when you access the Site we are aware of your usage of the Site, and may gather, collect and record the information relating to such usage, including geo-location information, IP address, device and connection information, browser information and web-log information, and all communications recorded by Users through the Site.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; what data does it collect",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            1643,
+            1755
+          ],
+          "answer": "When you interact with our Services, we may collect and store information from you directly as described below:\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            1791,
+            1969
+          ],
+          "answer": "If you create an Account, you may be required to provide your name, e-mail address, a password and other information that helps us confirm that it is you accessing your account.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            2044,
+            2286
+          ],
+          "answer": "If you sign into the Site or Games with Facebook Connect we will collect information that is visible via your Facebook account such as: (1) your first and last name, (2) Facebook ID, (3) Profile Picture/URL, and (4) list of Facebook friends.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            2532,
+            3400
+          ],
+          "answer": "We may also offer you the option to complete a user profile that is visible to other PeopleFun users.\nYour user profile may include a profile photo, a PeopleFun username, your gender, biographic details that you provide, details about the Games you play, and a PeopleFun user ID number that is created by PeopleFun and used to identify your profile.\nThe PeopleFun username will be public and will be shown to other users, but will only permit access to information that is considered public or that you have designated as public in your user profile settings.\nWe may also offer you the ability to import your contacts or manually enter e-mail addresses so that you can locate your contacts on PeopleFun and invite your contacts to join you in the Games.\nWe will store those contacts for purposes of helping you and your contacts make connections through our Services.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            3430,
+            3913
+          ],
+          "answer": "When you order any good or service through the Game, including any virtual currency or virtual good, our payment processing service provider will collect your name, phone number, e-mail address, mailing address, billing address, and complete credit card information that enables them to receive your payment.\nOur payment processing service provider may also retain this information to enable you to purchase additional items through our Game without having to re-enter it each time.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            4055,
+            4387
+          ],
+          "answer": "When you ask for assistance from our Customer Support team, we will collect and store the contact information you provide (generally your name and e-mail address), information about your game play or activity on the Games, and your user name or ID number.\nWe will also store the correspondence and any information contained within.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            4888,
+            5729
+          ],
+          "answer": "When you access our Services, we may collect (i) certain technical information about your mobile device or computer system, including IP Address, mobile device ID (IDFA, Google Advertising ID or other identifiers), and the version of your operating system; and (ii) usage statistics about your interactions with the Games.\nIn certain Games we will create and assign to your device an identifier that is similar to an account number.\nWe may collect the name you have associated with your device, device type, telephone number, country, and any other information you choose to provide, such as user name, character name, or e-mail address.\nWe may also access your contacts to enable you to invite friends to join you in the Games.\nThis information is typically collected through the use of third-party mobile device software development kits.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6208
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\nWe may use location information to improve and personalize our Services for you.\nIf you do not want us to collect location information, you may disable that feature on your mobile device.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; are you accessing and information about me from my phone?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            9236,
+            10181
+          ],
+          "answer": "Web-Behavior Information collected through tracking technology (eg from cookies and similar technologies) We and our third party service providers use cookies and similar technologies (such as web beacons, tags, scripts and device identifiers) to:\nhelp us recognize you when you use our Services; customize and improve your experience; provide security; analyze usage of our Services (such as to analyze your interactions with the results, reports, and other features of the Service); gather demographic information about our user base; offer our Services to you; monitor the success of marketing programs; and serve targeted advertising on our site and on other sites around the Internet.\nIf you reject cookies, you may still use our site, but your ability to use some features or areas of our site may be limited.\nFor more information, including the types of cookies found on 23andMe and how to control cookies, please read our Cookie Policy.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            27300,
+            27586
+          ],
+          "answer": "They use cookies and similar technologies, to gather information about your browser's or device's visits and usage patterns on our Services and on other websites over time, which helps to better personalize ads to match your interests, and to measure the effectiveness of ad campaigns.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; will potential employers be able to obtain my address?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            3358,
+            3873
+          ],
+          "answer": "  When you register to the Site we ask you to provide certain personal information, including a valid email address, location, facebook or google account log in details and username.\nWe may collect additional information such as physical address, telephone number or other contact details and additional authentication information, to provide you with the services you need (such as payment or withdrawal of funds, sending physical goods), or to ensure the marketplace integrity (for example, prevention of fraud).\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            4943,
+            5248
+          ],
+          "answer": "  Once you register, your username and additional information regarding your activity is made public and is visible to all Users of the Site.\nThis information includes photos you upload, your published portfolio, Gig information, ratings, and additional information you may choose to add to your profile.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; what information are they collecting?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            1791,
+            1969
+          ],
+          "answer": "If you create an Account, you may be required to provide your name, e-mail address, a password and other information that helps us confirm that it is you accessing your account.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            2044,
+            2286
+          ],
+          "answer": "If you sign into the Site or Games with Facebook Connect we will collect information that is visible via your Facebook account such as: (1) your first and last name, (2) Facebook ID, (3) Profile Picture/URL, and (4) list of Facebook friends.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            2532,
+            3400
+          ],
+          "answer": "We may also offer you the option to complete a user profile that is visible to other PeopleFun users.\nYour user profile may include a profile photo, a PeopleFun username, your gender, biographic details that you provide, details about the Games you play, and a PeopleFun user ID number that is created by PeopleFun and used to identify your profile.\nThe PeopleFun username will be public and will be shown to other users, but will only permit access to information that is considered public or that you have designated as public in your user profile settings.\nWe may also offer you the ability to import your contacts or manually enter e-mail addresses so that you can locate your contacts on PeopleFun and invite your contacts to join you in the Games.\nWe will store those contacts for purposes of helping you and your contacts make connections through our Services.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            3430,
+            3913
+          ],
+          "answer": "When you order any good or service through the Game, including any virtual currency or virtual good, our payment processing service provider will collect your name, phone number, e-mail address, mailing address, billing address, and complete credit card information that enables them to receive your payment.\nOur payment processing service provider may also retain this information to enable you to purchase additional items through our Game without having to re-enter it each time.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            4055,
+            4387
+          ],
+          "answer": "When you ask for assistance from our Customer Support team, we will collect and store the contact information you provide (generally your name and e-mail address), information about your game play or activity on the Games, and your user name or ID number.\nWe will also store the correspondence and any information contained within.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            4888,
+            5729
+          ],
+          "answer": "When you access our Services, we may collect (i) certain technical information about your mobile device or computer system, including IP Address, mobile device ID (IDFA, Google Advertising ID or other identifiers), and the version of your operating system; and (ii) usage statistics about your interactions with the Games.\nIn certain Games we will create and assign to your device an identifier that is similar to an account number.\nWe may collect the name you have associated with your device, device type, telephone number, country, and any other information you choose to provide, such as user name, character name, or e-mail address.\nWe may also access your contacts to enable you to invite friends to join you in the Games.\nThis information is typically collected through the use of third-party mobile device software development kits.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6020
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; what information does the company store about me?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            3358,
+            5248
+          ],
+          "answer": "  When you register to the Site we ask you to provide certain personal information, including a valid email address, location, facebook or google account log in details and username.\nWe may collect additional information such as physical address, telephone number or other contact details and additional authentication information, to provide you with the services you need (such as payment or withdrawal of funds, sending physical goods), or to ensure the marketplace integrity (for example, prevention of fraud).\n  In addition, we collect information while you access, browse, view or otherwise use the Site.\nIn other words, when you access the Site we are aware of your usage of the Site, and may gather, collect and record the information relating to such usage, including geo-location information, IP address, device and connection information, browser information and web-log information, and all communications recorded by Users through the Site.\nWe use that information to enhance user experience, personalize your browsing experience as well as monitor the Site for preventing fraud and inappropriate content or behaviour.\nWe may also collect supplemental information obtained from third parties such as demographic and navigation data.\n  Additionally, in order to improve your online experience at Fiverr, we have implemented impression reporting.\nWhile you view our ads, we may gather user Global Unique Identifier, HTTP request data like, user agent, IP, host, url, country/continent from which request made, browser info, device/operating system/operating system version.\n  Once you register, your username and additional information regarding your activity is made public and is visible to all Users of the Site.\nThis information includes photos you upload, your published portfolio, Gig information, ratings, and additional information you may choose to add to your profile.\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            5626,
+            5924
+          ],
+          "answer": "We also collect technical information indirectly and automatically through our systems.\nThis information may include logging your Internet Protocol (IP) address, software configuration, operating system and use of cookies (cookies are small files sent from us to your computer and sometimes back).\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; what data do they take",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            426,
+            1006
+          ],
+          "answer": " Personal Information: When registering for TickTick, we collect personal information such as your name.\nUsers who contact us via email, the email addresses and information you submitted voluntarily will also be collected.\n Non-Personal Information: It includes but is not limited to your devices configuration, the package ID and version of the application that you use.\n We collect and hold only the information absolutely necessary for using our services, as well as limiting the internal access to your personal information for the purposes stated in Information Usage below.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"23andMe\"'s privacy policy; do you use my data to do medical research",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            15349,
+            17584
+          ],
+          "answer": "To allow you to share your Personal Information for 23andMe Research purposes You have the choice to participate in 23andMe Research by providing your consent.\n\"23andMe Research\" refers to research aimed at publication in peer-reviewed journals and other research funded by the federal government (such as the National Institutes of Health - NIH) conducted by 23andMe.\n23andMe Research may be sponsored by, conducted on behalf of, or in collaboration with third parties, such as non-profit foundations, academic institutions or pharmaceutical companies.\n23andMe Research may study a specific group or population, identify potential areas or targets for therapeutics development, conduct or support the development of drugs, diagnostics or devices to diagnose, predict or treat medical or other health conditions, work with public, private and/or non-profit entities on genetic research initiatives, or otherwise create, commercialize, and apply this new knowledge to improve health care.\n23andMe Research uses Aggregate and/or Individual-level Genetic Information and Self-Reported Information as specified in the appropriate Consent Document(s), as explained in greater detail below.\nYour De-identified Genetic and Self-Reported Information may be used for 23andMe Research only if you have consented to this use by completing a Consent Document.\nIf you have completed the Main Research Consent Document:\nYour Genetic Information and/or Self-Reported Information will be used for research purposes, but it will be de-identified and will not be linked to your Registration Information.\n23andMe may use individual-level Genetic Information and Self-Reported Information internally at 23andMe for research purposes.\n23andMe may share summary statistics, which do not identify any particular individual or contain individual-level information, with our qualified research collaborators.\nIf you have completed the Individual Level Data Sharing Consent, or additional consent agreement, in addition to the uses above under the Main Consent Document, 23andMe may share De-identified Individual-level Genetic Information and Self-Reported Information with select third party research collaborators for 23andMe partners for Research purposes.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            17610,
+            17749
+          ],
+          "answer": "You may withdraw your consent to participate in 23andMe Research at any time by changing your consent status within your Account Settings.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            17874,
+            18399
+          ],
+          "answer": "23andMe will not include your Genetic Information or Self-Reported Information in studies that start more than 30 days after you withdraw (it may take up to 30 days to withdraw your information after you withdraw your consent).\nAny research involving your data that has already been performed or published prior to your withdrawal from 23andMe Research will not be reversed, undone, or withdrawn.\nYou may also discontinue your participation in 23andMe Research by deleting your 23andMe account (as described in section 5.d).\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            18455,
+            18791
+          ],
+          "answer": "If you choose not to complete a Consent Document or any additional agreement with 23andMe, your Personal Information will not be used for 23andMe Research.\nHowever, your Genetic Information and Self-Reported Information may still be used by us and shared with our third party service providers to as outlined in this Privacy Statement.\n"
+        },
+        {
+          "file_path": "privacy_qa/23andMe.txt",
+          "span": [
+            19128,
+            20113
+          ],
+          "answer": "To recruit you for external research Research is an important aspect of 23andMes Services and we want to ensure interested participants are aware of additional opportunities to contribute to interesting, novel scientific research conducted by academic institutions, healthcare organizations, pharmaceutical companies, and other groups.\nIf you have chosen to participate in 23andMe Research, from time to time we may inform you of third party research opportunities for which you may be eligible.\nFor example, if a university tells us about a new cancer research project, we may send an email to 23andMe research participants who potentially fit the relevant eligibility criteria based on their Self-Reported Information to make them aware of the research project and provide a link to participate with the research organization conducting the study.\nHowever we will not share Individual-level Genetic Information or Self-Reported Information with any third party without your consent.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; how does fiverr protect freelancers' personal information?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            19890,
+            20888
+          ],
+          "answer": "  We take great care in maintaining the security of the Site and your information and in preventing unauthorized access, loss, misuse, alteration, destruction or damage to it through industry standard technologies and internal procedures.\nWe contractually ensure that any third party processing your personal information equally provide for confidentiality and integrity of your data in a secure way.\nThe transmission of data via the internet is not completely secure, and although we will do our best to protect your personal information, we cannot guarantee the security of your data transmitted to the Site; any transmission is at your own risk.\nOnce we have received your data, we will use strict procedures and security features to try to prevent unauthorized access.\n  Users who have registered to the Site agree to keep their password in strict confidence and not disclose such password to any third party.\n  Further information about our data security practices can be provided on request.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; can other people see my financial information",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            12368,
+            12742
+          ],
+          "answer": "We do not collect credit information; but allow our payment vendors to collect information for the purpose of collecting payments from buyers on the Site or transferring payments to sellers on the Site.\nWe are not exposed to the payment information provided to our payment vendors, and this information is subject to the privacy policy applicable to the payment vendor; and\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"TickTick: To Do List with Reminder, Day Planner\"'s privacy policy; is my task schedule being tracked?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            426,
+            531
+          ],
+          "answer": " Personal Information: When registering for TickTick, we collect personal information such as your name.\n"
+        },
+        {
+          "file_path": "privacy_qa/TickTick: To Do List with Reminder, Day Planner.txt",
+          "span": [
+            798,
+            1006
+          ],
+          "answer": " We collect and hold only the information absolutely necessary for using our services, as well as limiting the internal access to your personal information for the purposes stated in Information Usage below.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does the app show targeted advertisements?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            14742,
+            15088
+          ],
+          "answer": "We may share (i) aggregated information (information about you and other users collectively, but not specifically identifiable to you); (ii) anonymous information; and (iii) certain technical information (including IP Addresses and mobile device IDs) to develop and deliver targeted advertising in the Games and on the websites of third parties.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            15324,
+            15552
+          ],
+          "answer": "The information collected may be used to offer you targeted ad-selection and delivery in order to personalize your user experience by ensuring that advertisements for products and services you see will appeal to you, a practice\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; is my information sold to any third parties?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            10335,
+            11080
+          ],
+          "answer": "  We do not sell or rent your personal information to third parties for their marketing purposes without your explicit consent.\n  We may combine your personal information with information we collect automatically or obtain from other companies and use it to improve and personalize our services, content and advertising.\nIf you do not wish to receive marketing communications from us, you can opt-out through the link attached to each communication or by sending an email to optout@fiverr.com.\n  We may provide your personal details to third parties, only in order to operate the Site, provide our services to you, fulfil obligations imposed on us by applicable laws and regulations, and prevent fraud and illegal activities, as detailed below:\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Fiverr\"'s privacy policy; what information can other people see?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            528,
+            847
+          ],
+          "answer": "  We collect information that you provide us or voluntarily share with other users, and also some general technical information that is automatically gathered by our systems, such as IP address, browser information and cookies to enable you to have a better user experience and a more personalized browsing experience.\n"
+        },
+        {
+          "file_path": "privacy_qa/Fiverr.txt",
+          "span": [
+            4943,
+            5248
+          ],
+          "answer": "  Once you register, your username and additional information regarding your activity is made public and is visible to all Users of the Site.\nThis information includes photos you upload, your published portfolio, Gig information, ratings, and additional information you may choose to add to your profile.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does this app track my gps location?",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            5760,
+            6208
+          ],
+          "answer": " When you use our Services, we may collect and store information about your location by converting your IP address into a rough geo-location or by accessing your mobile devices GPS coordinates or coarse location if you enable location services on your device.\nWe may use location information to improve and personalize our Services for you.\nIf you do not want us to collect location information, you may disable that feature on your mobile device.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            7061,
+            7152
+          ],
+          "answer": "Games may use location-based tracking, which relies upon a mobile devices GPS coordinates.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does it sell data",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            14539,
+            15324
+          ],
+          "answer": "5.3       Advertising of Third Party Products and Services\nWe do not actively share personal information with third party advertisers for their direct marketing purposes unless you give us your consent.\nWe may share (i) aggregated information (information about you and other users collectively, but not specifically identifiable to you); (ii) anonymous information; and (iii) certain technical information (including IP Addresses and mobile device IDs) to develop and deliver targeted advertising in the Games and on the websites of third parties.\nWe may also allow advertisers to collect these types of information within the Games and they may share it with us.\nAdvertisers may collect this information through the use of tracking technologies like browser cookies and web beacons.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            15709,
+            16104
+          ],
+          "answer": "We may disclose aggregated and anonymous information to describe the Services to prospective partners, advertisers, and other third parties, and for other lawful purposes.\nWe may use aggregate, non-personally identifiable information for our own internal promotion or marketing purposes and we may share such aggregate non-personally identifiable information with others for marketing purposes.\n"
+        }
+      ]
+    },
+    {
+      "query": "Consider \"Wordscapes\"'s privacy policy; does it share data with others",
+      "snippets": [
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            13330,
+            13448
+          ],
+          "answer": "We may share your information (in some cases personal information) with third parties in the following circumstances:\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            13488,
+            13734
+          ],
+          "answer": "We will provide your information to third party companies to perform certain services, including but not limited to payment processing, data analysis, e-mail delivery, hosting services, customer service and to assist us in our marketing efforts.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            14598,
+            15324
+          ],
+          "answer": "We do not actively share personal information with third party advertisers for their direct marketing purposes unless you give us your consent.\nWe may share (i) aggregated information (information about you and other users collectively, but not specifically identifiable to you); (ii) anonymous information; and (iii) certain technical information (including IP Addresses and mobile device IDs) to develop and deliver targeted advertising in the Games and on the websites of third parties.\nWe may also allow advertisers to collect these types of information within the Games and they may share it with us.\nAdvertisers may collect this information through the use of tracking technologies like browser cookies and web beacons.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            15709,
+            16104
+          ],
+          "answer": "We may disclose aggregated and anonymous information to describe the Services to prospective partners, advertisers, and other third parties, and for other lawful purposes.\nWe may use aggregate, non-personally identifiable information for our own internal promotion or marketing purposes and we may share such aggregate non-personally identifiable information with others for marketing purposes.\n"
+        },
+        {
+          "file_path": "privacy_qa/Wordscapes.txt",
+          "span": [
+            18250,
+            19035
+          ],
+          "answer": "Your information may be disclosed: (i) when we have a good faith belief that we are required to disclose the information in response to legal process (for example, a court order, search warrant or subpoena); (ii) to satisfy any applicable laws or regulations; (iii) where we believe that the Games are being used in the commission of a crime, including to report such criminal activity or to exchange information with other companies and organizations for the purposes of fraud protection and credit risk reduction; (iv) when we have a good faith belief that there is an emergency that poses a threat to the health and/or safety of you, another person or the public generally; and (v) in order to protect the rights or property of PeopleFun, including to enforce our Terms of Service.\n"
+        }
+      ]
+    }
+  ]
+}
