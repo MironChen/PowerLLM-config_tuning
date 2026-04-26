@@ -633,6 +633,11 @@ Results are saved to `benchmark_results/benchmark_results_{timestamp}.json`:
         "at_20_mean": 0.43,
         "at_final_k_mean": 0.42
       },
+      "f1": {
+        "at_10_mean": 0.54,
+        "at_20_mean": 0.55,
+        "at_final_k_mean": 0.53
+      },
       "ranking": {
         "mrr_mean": 0.61
       },
@@ -724,6 +729,11 @@ Results are saved to `benchmark_results/benchmark_results_{timestamp}.json`:
           "at_20": 0.43,
           "at_final_k": 0.42
         },
+        "f1": {
+          "at_10": 0.58,
+          "at_20": 0.59,
+          "at_final_k": 0.57
+        },
         "ranking": {
           "mrr": 1.0
         },
@@ -807,6 +817,19 @@ For any configured `k` value:
 - Candidate-pool precision metrics are computed from `results[*].retrieved_chunks`
 - The benchmark also always records `at_final_k`, computed from `results[*].final_retrieved_chunks`
 
+### F1 Metrics
+
+F1 metrics are stored under `results[*].retrieval_metrics.f1` and aggregated into `summary.metrics.f1`.
+
+For any `k` value that appears in both `recall_ks` and `precision_ks`:
+
+`F1@k = 2 * (Recall@k * Precision@k) / (Recall@k + Precision@k)`
+
+- Computed as the harmonic mean of recall and precision
+- Only calculated for k values shared between the recall and precision configurations
+- `at_final_k` is always included
+- Returns `null` when either recall or precision is `null`
+
 ### Fully Covered@FinalK
 
 Binary strict-coverage metric over the final context window:
@@ -838,20 +861,6 @@ Mean Reciprocal Rank of the first relevant chunk:
 ### Latency
 
 Per-question execution time measured from query submission to retrieval completion.
-
-## System Prompt
-
-The benchmark uses a constrained system prompt to ensure extractive answers. Note that the system prompt we use here is not the same as the one in actual rag pipeline.
-
-```python
-BENCHMARK_SYSTEM_PROMPT = (
-    "Answer using only the exact text span(s) from the context."
-    "Do not explain."
-    "Do not cite sections."
-    "If multiple spans are relevant, return them as a semicolon-separated list."
-    "If no answer is found, return: NOT FOUND"
-)
-```
 
 ## Caching Strategy
 
