@@ -256,7 +256,6 @@ tsconfig.tsbuildinfo
 
 
 # Project Specific
-*.pdf
 *.csv
 pdf/
 csv/
