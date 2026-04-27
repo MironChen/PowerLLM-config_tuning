@@ -381,6 +381,15 @@ This is the recommended sampling strategy for parameter comparison runs.
 Use `benchmark/build_mix_dataset.py` when you want paired mixed datasets for
 config tuning and validation that do not share source documents.
 
+The mixed split files used below are generated artifacts, not files that are
+expected to already exist in the repository:
+
+- `benchmark/legalbench_mixed_config_q200_c20_seed42.json`
+- `benchmark/legalbench_mixed_validation_q200_c20_seed42.json`
+
+Generate them first from the original `benchmark/legalbench-datasets/*.json`
+inputs before running config tuning or mixed-split benchmark evaluation.
+
 The script samples each input file twice with the same per-source quota:
 
 - first for the `config` split
@@ -416,6 +425,10 @@ Notes:
 For Optuna-based retrieval config tuning, the current recommended default dataset is the **config split** of the mixed dataset:
 
 - `benchmark/legalbench_mixed_config_q200_c20_seed42.json` (LegalBench-RAG mixed split format)
+
+If this file is missing, return to the "Mixed Config + Validation Splits"
+section above and generate both mixed split files with
+`benchmark/build_mix_dataset.py` first.
 
 This mixed dataset combines multiple LegalBench-RAG sources (CUAD, MAUD, ContractNLI, Privacy QA) and provides better task diversity than a single-source dataset. The config split is used for hyperparameter optimization, while the validation split (`benchmark/legalbench_mixed_validation_q200_c20_seed42.json`) can be used for final evaluation of the best configuration.
 

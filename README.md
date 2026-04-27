@@ -77,7 +77,7 @@ For comprehensive documentation on specific topics, see the dedicated READMEs in
 
 - **[benchmark/README.md](benchmark/README.md)** — Full benchmark documentation, including architecture, metrics, dataset sampling, and caching strategy.
 - **[benchmark/reproduce_README.md](benchmark/reproduce_README.md)** — Step-by-step instructions for reproducing benchmark results, including dataset preparation and tuning/benchmark commands.
-- **[benchmark/retrieval_config_tuning_README.md](benchmark/retrieval_config_tuning_README.md)** — Guide to Optuna-based retrieval hyperparameter tuning, including search-space presets, budget pruning, and result inspection.
+- **[benchmark/retrieval_config_tuning_README.md](benchmark/retrieval_config_tuning_README.md)** — Guide to Optuna-based retrieval hyperparameter tuning, including the exact commands for generating the required mixed split files before tuning.
 
 ### Files
 manual.pdf

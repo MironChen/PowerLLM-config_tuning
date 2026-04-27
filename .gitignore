@@ -288,12 +288,8 @@ maud.json
 # Cache
 query_cache/
 
-# Agents
-CLAUDE.md
-AGENTS.md
-.claude/
-
 config.json
+/no_overlap_dataset/
 
 /cases_data/
 /test/

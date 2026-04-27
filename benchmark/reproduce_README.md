@@ -7,9 +7,38 @@ The benchmark is evaluated on subsets of the original datasets. Each subset is s
 
 A Python script, `benchmark/dataset_cut3.py`, is provided to sample data from the original datasets.
 
+### 1.1 Download the Corpus and Datasets
+The corpus and dataset JSON files are provided by LegalBench-RAG. You can download them from https://www.dropbox.com/scl/fo/r7xfa5i3hdsbxex1w6amw/AID389Olvtm-ZLTKAPrw6k4?dl=0&rlkey=5n8zrbk4c08lbit3iiexofmwg (provided by the LegalBench-RAG authors).
 
-### 1.1 Prepare Mixed Dataset
+LegalBench-RAG official Repository: https://github.com/zeroentropy-ai/legalbenchrag
+
+Once downloaded, make sure the following folders are placed under this repository's `benchmark/` directory:
+
+1. Move the `corpus` folder to `benchmark/corpus/`.
+
+2. Move the dataset JSON folder to `benchmark/legalbench-datasets/`.
+
+The reproduction commands in this document expect these files and folders to exist:
+- `benchmark/corpus/cuad/...`
+- `benchmark/corpus/maud/...`
+- `benchmark/corpus/contractnli/...`
+- `benchmark/corpus/privacy_qa/...`
+- `benchmark/legalbench-datasets/cuad.json`
+- `benchmark/legalbench-datasets/maud.json`
+- `benchmark/legalbench-datasets/contractnli.json`
+- `benchmark/legalbench-datasets/privacy_qa.json`
+
+### 1.2 Prepare Mixed Dataset
 Since LegalBench-RAG combines four datasets, we provide a Python script, `benchmark/build_mix_dataset.py`, to build paired mixed datasets for config tuning and validation.
+
+The mixed split files referenced later in this document are generated artifacts,
+not repository source files:
+
+- `benchmark/legalbench_mixed_config_q200_c20_seed42.json`
+- `benchmark/legalbench_mixed_validation_q200_c20_seed42.json`
+
+Generate these first from the original `benchmark/legalbench-datasets/*.json`
+inputs before running config tuning or the mixed-split benchmark commands.
 
 #### Mixed Config + Validation Splits
 Use the script to build paired mixed datasets for config tuning and validation that do not share source documents.
@@ -43,8 +72,9 @@ Notes:
 - the two outputs do not share contexts
 - each source must have enough eligible contexts to satisfy both splits
 - `--max-contexts` and `--max-questions` are required for this dual-output flow
+- the config split is the tuning dataset referenced again in `benchmark/retrieval_config_tuning_README.md`
 
-### 1.2 Sample Questions from Each Full Dataset
+### 1.3 Sample Questions from Each Full Dataset
 For each dataset in LegalBench-RAG, the benchmark uses 200 questions, with a minimum of 10 questions per context.
 
 ```bash

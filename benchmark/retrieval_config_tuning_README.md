@@ -41,6 +41,78 @@ To change the embedding model options used by tuning, edit the embedding registr
 
 To change the chat model options used by tuning, edit the chat model registry in [model_resolver.py](/Users/mironchen/Desktop/PowerLLM/src/powerllm/models/model_resolver.py).
 
+## Generate Required Split Files
+
+The default tuning dataset is not a hand-written repository file. Generate it
+from the original LegalBench-RAG dataset JSON files before running
+`benchmark.retrieval_config_tuning`.
+
+### 1. Build the mixed config/validation splits
+
+```bash
+venv/bin/python -m benchmark.build_mix_dataset \
+  --input benchmark/legalbench-datasets/cuad.json \
+          benchmark/legalbench-datasets/maud.json \
+          benchmark/legalbench-datasets/contractnli.json \
+          benchmark/legalbench-datasets/privacy_qa.json \
+  --max-contexts 7 5 5 3 \
+  --max-questions 70 50 50 30 \
+  --min-per-context 10 \
+  --seed 42 \
+  --output-config benchmark/legalbench_mixed_config_q200_c20_seed42.json \
+  --output-validation benchmark/legalbench_mixed_validation_q200_c20_seed42.json
+```
+
+This produces the two mixed split files referenced by the tuning and benchmark
+docs:
+
+- `benchmark/legalbench_mixed_config_q200_c20_seed42.json`
+- `benchmark/legalbench_mixed_validation_q200_c20_seed42.json`
+
+### 2. Build the no-overlap validation splits used in the benchmark report
+
+```bash
+venv/bin/python benchmark/dataset_cut3.py \
+  --input-path benchmark/legalbench-datasets/cuad.json \
+  --exclude-dataset benchmark/legalbench_mixed_config_q200_c20_seed42.json \
+  --target-questions 200 \
+  --target-contexts 20 \
+  --min-per-context 10 \
+  --seed 101 \
+  --output benchmark/no_overlap_dataset/legalbench_sample_cuad_q200_c20_min10_seed101_no_config_overlap.json
+
+venv/bin/python benchmark/dataset_cut3.py \
+  --input-path benchmark/legalbench-datasets/maud.json \
+  --exclude-dataset benchmark/legalbench_mixed_config_q200_c20_seed42.json \
+  --target-questions 200 \
+  --target-contexts 20 \
+  --min-per-context 10 \
+  --seed 102 \
+  --output benchmark/no_overlap_dataset/legalbench_sample_maud_q200_c20_min10_seed102_no_config_overlap.json
+
+venv/bin/python benchmark/dataset_cut3.py \
+  --input-path benchmark/legalbench-datasets/contractnli.json \
+  --exclude-dataset benchmark/legalbench_mixed_config_q200_c20_seed42.json \
+  --target-questions 200 \
+  --target-contexts 20 \
+  --min-per-context 10 \
+  --seed 103 \
+  --output benchmark/no_overlap_dataset/legalbench_sample_contractnli_q200_c20_min10_seed103_no_config_overlap.json
+
+venv/bin/python benchmark/dataset_cut3.py \
+  --input-path benchmark/legalbench-datasets/privacy_qa.json \
+  --exclude-dataset benchmark/legalbench_mixed_config_q200_c20_seed42.json \
+  --target-questions 80 \
+  --target-contexts 4 \
+  --min-per-context 10 \
+  --seed 104 \
+  --output benchmark/no_overlap_dataset/legalbench_sample_privacy_qa_q80_c4_min10_seed104_no_config_overlap.json
+```
+
+If you only want to run config tuning, step 1 is the required part. Step 2 is
+only needed for reproducing the benchmark evaluation datasets discussed in
+`benchmark/reproduce_README.md`.
+
 ## Quick Start
 
 ```bash
