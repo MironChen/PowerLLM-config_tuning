@@ -7,6 +7,7 @@ langchain-google-genai
 google-genai
 openai
 httpx
+requests
 
 # --- Vector Database ---
 sqlite-vss>=0.1.2
@@ -21,15 +22,15 @@ paddleocr
 
 # --- Image & Computer Vision ---
 opencv-python-headless
-Pillow
+pillow
 imagehash
 
 # --- Data Validation & Utilities ---
 pydantic>=2.0
 python-dotenv
-pathlib
+pathlib>=1.0.1
 langchain-text-splitters
-protobuf
+protobuf>=3.19,<4
 langchain-chroma
 rank-bm25
 fastapi
@@ -41,3 +42,7 @@ rich
 
 typing-extensions
 sentence-transformers
+cn2an
+optuna
+optuna-dashboard
+python-multipart
